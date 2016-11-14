@@ -1,0 +1,161 @@
+<!doctype html>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="main.html" />
+<!--Bharat Mooc language option Added -->
+<%include file='modal/_modal-settings-language.html'/>
+<%! from microsite_configuration import microsite %>
+<%namespace name='static' file='static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+
+
+<%block name="pagetitle">${org.org_id}</%block>
+
+<%block name="bodyclass">courselist_page</%block><!--IITBombayX-2015 Nitin Ayer, block is added to identify CSS in SCSS files-->
+<!--IITBombayX-2015, CSS for this page is written in _courselist_page.scss files in themes foldes by Nitin Ayer-->
+
+<html>
+<head>
+<script type='text/javascript' src='/static/js/jquery.dotdotdot-1.2.1.js'></script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$('#dot6 .view_row_course #multilinedText').each(function() {
+	$(this).dotdotdot()
+	});
+});//]]>
+</script>
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="wrapper-container">
+	<!--banner-->
+                <div class="banner-image"><img src=${static.url('themes/'+settings.THEME_NAME+org.header_graphic)} alt="${org.org_id}" width="960px"></img></div>
+	<!--banner closed-->
+
+	<!--<div class="inner-container">
+	<a href="/schools-partners">Back to Partners</a>
+	</div>-->
+        
+	<!--University info-->
+
+		<section class="info-text">
+			<div class="info">
+			<p>${org.information}</p>
+			</div>
+
+			<div class="pagination">
+				<span class="step-links">
+
+				%if coursePg.has_previous():
+				<span>
+					<a href="?page=${coursePg.previous_page_number()}" class="links-active">previous&nbsp;</a>
+				</span>
+				%endif %
+
+				<span class="current">
+					Page ${coursePg.number} of ${coursePg.paginator.num_pages}
+				</span>
+
+				%if coursePg.has_next():
+          			<span>
+					<a href="?page=${coursePg.next_page_number()}" class="links-active">&nbsp;next</a>
+				</span>
+				%endif
+
+				</span>
+			</div>
+
+<!--Bharat MOOCs 19th Sept 2014 href changed so that course registration page open -->
+
+
+<!-------------------------------course data starts-------------------------------------->
+<!--IITBombayX related change . 2nd Nov 2015-->
+			<div class="view_content" id="dot6">
+			%if len(coursePg) != 0:
+			% for object in coursePg:
+
+			<!--first course start-->
+			<div class="view_row_course">
+				<div class="left_course_view_fieldset">	
+				<!--<div class="new_course_ribbon">
+				<img src="images/courses/course-status-new.png">
+				</div>-->
+				
+				<div class="top_view_fieldset">
+
+					<h2 class="title_course_title">
+					${object[8]}:&nbsp;<strong>
+					<!-- IITBombayX Cypress url of course link changed; it will now depend on the type of course, either draft or split -->
+					<a href="/courses/${object[11]}/about">${object[0]}</strong></a>
+					</h2>
+
+					<div class="course_sub_title" id="multilinedText">${object[1]}</div>
+
+					<div class="link_courses_page">
+					<!-- IITBombayX Cypress url of course link changed; it will now depend on the type of course, either draft or split -->
+					<a class="links-active" href="/courses/${object[11]}/about" target="_blank">Read more.</a>
+					</div>
+				</div>
+		
+				<div class="bottom_view_fieldset">
+
+					<ul class="clearfix">
+
+					<li class="first">
+					<span class="label">Starts:</span>
+					%if object[7] != None:
+					${object[7].strftime("%b %d %Y")}
+					%else:
+					${object[7]}
+					%endif
+					</li>
+											
+					<li>
+					<span class="label">Instructor:</span>
+					 %if len(object[4]) !=0:
+					${object[4][0]}
+					%else:
+					None
+                                        %endif
+					</li>
+
+					<li>
+					<strong class="college_name">
+					${object[9]}
+					</strong>
+					</li>
+
+					</ul>
+				</div>
+			</div>
+
+			<div class="right_course_view_fieldset">
+
+				<div class="image">
+				<!-- IITBombayX Cypress url of course link changed; it will now depend on the type of course, either draft or split -->
+				<a href="/courses/${object[11]}/about"><img class="image_style_none" title="${object[0]}" alt="${object[0]}" src="${object[5]}" width="265px" height="140px"></a>
+				</div>
+
+				<div class="learnmore_link">
+				<!-- IITBombayX Cypress url of course link changed; it will now depend on the type of course, either draft or split -->
+	                        <input type="submit" value = "${_("Learn More")}" onClick="location.href='/courses/${object[11]}/about'"></input>
+				</div>
+
+			</div>
+		</div>			
+	<!--first course ENDs -->                   
+ % endfor
+%else:
+<div class="views-row course-tile clearfix">
+<center> Sorry no courses are available at this time.</center>
+</div>
+%endif
+
+	</div>                
+<!--course data ends-->
+        </section>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<%inherit file="../../main.html" />
+<%! from microsite_configuration import microsite %>
+<%include file='../../modal/_modal-settings-language.html'/>
+<%namespace name='static' file='../../static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<%block name="pagetitle">${_("IITBombayX FAQ")}</%block>
+<%block name="bodyclass">iitbx_faq_en</%block><!--IITBombayX-2016 Nitin Ayer, block is added to identify CSS in SCSS files-->
+<!--IITBombayX-2016, CSS for this page is written in _about_page.scss inside theme folder by Nitin Ayer-->
+
+<head>
+</head>
+<body>
+
+<section class="container about">
+	<div class="main_content">
+		<div class="banner"><img src=${static.url('themes/'+settings.THEME_NAME+'/images/FAQ/faq_banner.png')} width="960px"></div>
+			<div class="wrapper">
+				<div class="wrapper-container">
+					<div class="wrapper-inner">
+						<div class="inner-class">
+							<div class="inner-content">
+								<table border="0" width="960px;" cellpadding="0" cellspacing="0">
+
+								<tr>
+
+								<td class ="table_column01" width="217px" valign="top">
+								<div class="sidebar">
+
+								<ul class="sidemenu">
+								<li><a class="links" href="${marketing_link('ABOUT')}">ABOUT</a></li>
+								<li><a class="links" href="${marketing_link('RESEARCH')}">RESEARCH & PEDAGOGY</a></li>
+								<li><a class="links" href="#" target="_blank">BLOG</a></li>
+								<li><a class="links" href="#" target="_blank">NEWS</a></li>
+								<li><a class="links" href="${marketing_link('FAQ')}">LEARNERS FAQ</a></li>
+								<li><a class="links-active" href="${marketing_link('IITBOMBAYX_FAQ')}">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} FAQ</a></li>
+								<!-- IITBombayX Cypress Dec 2015 -->
+								<li><a class="links" href="${marketing_link('MEMBER')}">Team</a></li>
+								<li><a class="links" href="${marketing_link('CONTACT')}">CONTACT US</a></li>
+								</ul>
+
+								</div>
+								</td>
+
+								<td class ="table_column02" width="743px">
+								<section class="inner-section">
+
+								<h2 class="field-page-tagline view-mode-full">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} FAQ</h2>
+								<div class="field-page-body view-mode-full">
+								<p>Our goal is to give you great self-service tools that ensure your success. Do you have specific learner questions? See our Learner's FAQs or post your question in your course specific Discussion forum. Still have questions or need help? Submit a question through our Contact page.</p>
+								<p><strong>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} FAQs</strong></p>
+
+								<div>
+
+								<section class="ac-container">
+
+								<div>
+								<input id="ac-1" name="accordion-1" type="checkbox" />
+								<label for="ac-1">What is ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}?</label>
+								<article class="ac-small">
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} is an initiative, designed and developed at IIT Bombay, and powered by Open edX. ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} aims to offer the highest quality education, both online and in the classroom, to all learners.</p>
+								</article>
+								</div>
+
+
+								<br><p><strong>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}'s FAQ - Open Source Technology & Open edX</strong></p>
+
+								<div>
+								<input id="ac-2" name="accordion-1" type="checkbox" />
+								<label for="ac-2">What features does ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} use?</label>
+								<article class="ac-large">
+								<p>Features that are available or planned for the ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} platform include: self-paced learning, online discussion groups, wiki-based collaborative learning, assessment of learning as a learner progresses through a course, and online laboratories and other interactive learning tools. Because it is open source, the platform will be continuously improved by a worldwide community of collaborators, with new features added as the need arises.</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-3" name="accordion-1" type="checkbox" />
+								<label for="ac-3">How is this different from what other Universities are doing online?</label>
+								<article class="ac-medium">
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} is a non-profit initiative, dedicated to improving our understanding of learning and delivering better educational experiences, both on campus and beyond. The platform will also serve as a laboratory from which data will be gathered to better understand how students learn.</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-4" name="accordion-1" type="checkbox" />
+								<label for="ac-4">What is Open Source?</label>
+								<article class="ac-large">
+								<p>Open source is a philosophy that refers to making software freely available for use and/or modification as users see fit. In exchange for use of the software, users add their contributions to the software, making it in the form of public collaboration. Before the contributions are officially incorporated within the primary source code, an oversight body typically ensures that additions meet a certain standard of quality and usefulness. The ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} platform was made available as open source code from September 25th, 2014.</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-5" name="accordion-1" type="checkbox" />
+								<label for="ac-5">How can I get the ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} open-source platform technology?</label>
+								<article class="ac-small">
+								<p>The ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} Massive Open Online Learning platform source code, as well as platform developments from IIT Bombay and other contributors, are freely available. All the details are available at ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}'s official web portal.</p>
+								</article>
+								</div>
+
+								</section>
+								</div>
+								</div>
+								</section>
+                    						</td>
+								</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</section>
+</body>
+

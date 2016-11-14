@@ -1,0 +1,225 @@
+//IITBombayX-2015, This file is created by Nitin Ayer, it contains CSS related to Index page.
+
+.index-page {
+  header.global nav {
+   max-width: 1170px;
+   width: 1170px;
+ }
+
+ header.global{
+  position: fixed;
+  top: 0px;
+ }
+
+ .wrapper-footer footer {
+   width: 1170px !important;
+   max-width: 1170px !important;
+   padding: 0px 15px 0px 15px;
+ }
+
+ .wrapper-footer footer .open-edx_logo, #footer-openedx .open-edx_logo {
+   padding-top: 1.8em !important;
+ }
+
+ .content-wrapper{
+  margin-top: 76px;
+  background: $white;
+ }
+
+//CSS for home banner
+ .home>header{
+  width: 1200px;
+  min-width: 1200px;
+  height: 368px;
+  margin: auto;
+  //margin-top: 76px;
+ }
+
+//CSS for Course listing background
+ .courses-container{
+  background-color: $course_block-bg;
+  box-shadow: 0px 8px 8px -8px rgba(0, 0, 0, 0.1) inset, 0px -8px 8px -8px rgba(0, 0, 0, 0.1) inset;
+  margin:auto;
+  padding: 18px 8px 0px 7px;
+  max-width: 1185px;
+ }
+
+//CSS for course listing tiles
+ .home .highlighted-courses{
+  margin-bottom: 0px;
+ }
+
+
+ .highlighted-courses .courses{
+  //padding: 20px 8px 20px 7px;
+  padding-top: 0px;
+ }
+
+ .home .courses-container .courses .courses-listing .courses-listing-item {
+  margin: 15px 7px 15px 8px;
+  width: calc(25% - 15px);
+ }
+
+ .course-organization, .course-code, .course-title{
+  text-transform: none;
+ }
+
+//CSS for text on homebanner image
+ .banner_text{
+  width: auto;
+  margin: 0px;
+  padding-top: 0px;
+ }
+
+ .banner_inner-text{
+  width: 1200px;
+  margin: auto;
+  margin-top: 0px;
+  height: 368px;
+  overflow: hidden;
+ }
+
+ .banner_tagline{
+  position: relative;
+  top: 175px;
+  left: 125px;
+ }
+
+ .banner_tagline_text{
+  margin: 0px;
+  margin-bottom: 5px;
+  font-family: $font_family1;
+  font-size: 26px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: $white;
+  margin-bottom: -10px;
+ }
+
+//CSS for homepage tagline/
+ .tagline_container{
+  width: 100%;
+  margin: 0px;
+  margin-top: 20px;
+  padding: 0px;
+ }
+
+ .tagline_content{
+  width: 1200px;
+  margin: auto;
+ }
+
+ .tagline{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: -5px;
+ }
+
+ .tagline_text{
+  color: $button-color;
+  font-family: $font_family1;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 300;
+  text-transform: none;
+  margin-bottom: 0px;
+  letter-spacing: 0em;
+ }
+
+ .tagline p{
+  color: $white;
+  font-size: 22px;
+  height: 12px;
+  margin: 0px;
+  padding: 0px;
+  valign: top;
+  text-align: center;
+  position: relative;
+  top: -1px;
+ }
+ 
+ .courses-container .courses-more{
+  text-align: center !important;
+  display: table;
+  margin: auto;
+  padding-bottom: 20px;
+ }
+
+  .courses-more-cta:hover {
+   //color: #FFF;
+   text-decoration: none;
+   background-image: none;
+   background-color: $link-color;
+ }
+
+  .courses-more-cta {
+   display: table;
+   background: $button-color none repeat scroll 0px 0px;
+   border: 0px none $white;
+   border-radius: 2px;
+   box-sizing: border-box;
+   color: $white;
+   width: 100%;
+   font-size: 18px;
+   font-weight: 600;
+   text-decoration: none;
+   text-shadow: none;
+   line-height: 18px;
+   padding: 10px 20px;
+   text-transform: none;
+   letter-spacing: normal;
+   font-family: $font_family2;
+ }
+
+  .courses-more-cta:visited {
+   box-shadow: none !important;
+   text-decoration: none;
+ }
+
+  .courses-more-cta:focus {
+   box-shadow: none !important;
+   text-decoration: none;
+ }
+
+ .courses-more-cta::after {
+   content: none !important;
+ }
+
+ .home > header .title{
+  margin: 0px;
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 0px 30px 0px 0px;
+  width: 35%;
+ }
+
+ .home > header .title .course-search .search-input{
+   height: 40px;
+   border: 2px solid $gray-1;
+ }
+
+ .home > header .title .course-search .search-button{
+  height: 40px;
+  border: 2px solid $gray-1;
+  background: $body-bg;
+ }
+
+ .home > header .title .course-search .search-button:hover{
+  background: $body-bg;
+ }
+
+ .home > header .title .course-search .search-button:focus{
+  background: $body-bg;
+ }
+
+ .fa{
+  color: $m-gray;
+  //color: #8a8c8f;
+  font-size: 22px
+ }
+
+ .home > header .title .course-search .search-input:focus{
+  border: 2px solid $gray-1;
+ }
+}

@@ -1,0 +1,498 @@
+<%inherit file="../../main.html" />
+<%include file='../../modal/_modal-settings-language.html'/>
+<%! from microsite_configuration import microsite %>
+<%namespace name='static' file='../../static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<%block name="pagetitle">${_("Learners FAQ")}</%block>
+
+<%block name="bodyclass">learners_faq_en</%block><!--IITBombayX-2016 Nitin Ayer, block is added to identify CSS in SCSS files-->
+<!--IITBombayX-2016, CSS for this page is written in _learners_faq_page.scss inside theme folder by Nitin Ayer-->
+
+<head>
+</head>
+<body>
+<section class="container about">
+	<div class="main_content">
+		<div class="banner"><img src=${static.url('themes/'+settings.THEME_NAME+'/images/FAQ/faq_banner.png')} width="960px"></div>
+			<div class="wrapper">
+				<div class="wrapper-container">
+					<div class="wrapper-inner">
+						<div class="inner-class">
+							<div class="inner-content">
+								<table border="0" width="960px;" cellpadding="0" cellspacing="0">
+                                
+								<tr>
+                                
+								<td class ="table_column01" width="217px" valign="top">
+								<div class="sidebar">
+
+								<ul class="sidemenu">
+								<li><a class="links" href="${marketing_link('ABOUT')}">ABOUT</a></li>
+								<li><a class="links" href="${marketing_link('RESEARCH')}">RESEARCH & PEDAGOGY</a></li>
+								<li><a class="links" href="#" target="_blank">BLOG</a></li>
+								<li><a class="links" href="#" target="_blank">NEWS</a></li>
+								<li><a class="links-active" href="${marketing_link('FAQ')}">LEARNERS FAQ</a></li>
+								<li><a class="links" href="${marketing_link('IITBOMBAYX_FAQ')}">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} FAQ</a></li>
+								<!-- IITBombayX Cypress Dec 2015 -->
+								<li><a class="links" href="${marketing_link('MEMBER')}">Team</a></li>
+								<li><a class="links" href="${marketing_link('CONTACT')}">CONTACT US</a></li>
+								</ul>
+                                
+								</div>
+					    			</td>
+                                
+								<td class ="table_column02" width="743px">
+								<section class="inner-section">
+                                
+								<h2 class="field-page-tagline view-mode-full">Learners' FAQ</h2>
+                                
+								<div class="field-page-body view-mode-full">
+
+								<p>Our goal is to provide you great self-service tools that ensure your success. Still need help after reading these? Please submit a question through our <a href="${marketing_link('CONTACT')}" class="links-active2" target="_blank">Contact Us</a> page or, if you are a current learner, post your question(s) in your Course Discussion forum.</p>
+                                
+								<p><strong>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} Basics</strong></p>
+                                
+								<div>
+								<section class="ac-container">
+								
+								<div>
+								<input id="ac-1" name="accordion-1" type="checkbox" />
+								<label for="ac-1">Who can take an ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} course? How do I sign up?</label>
+								<article class="ac-medium">
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} courses are open to everyone. All you need is access to a computer with a current browser, an Internet connection, and, of course, a desire to learn.<br />To sign up, create an ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} account and then register for the course of your choice. Choose Register Now to get started, registration is free!</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-2" name="accordion-1" type="checkbox" />
+								<label for="ac-2">What browsers are supported for use with ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} courses?</label>
+								<article class="ac-small">
+								<p>Our courseware works best with current versions of Chrome, Firefox or Safari, or with Internet Explorer version 9 and above.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-3" name="accordion-1" type="checkbox" />
+								<label for="ac-3">What if I have technical trouble with registration, login, or course access?</label>
+								<article class="ac-large">
+								<p>Many problems with registration, login, or access to ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} courses are caused by browser issues. Here are some things to try:<br><br>
+								- Switch to a current version of Chrome or Firefox<br>
+								- Check you browser settings to ensure both JavaScript and cookies are enabled<br>
+								- Clear your browser's cache</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-4" name="accordion-1" type="checkbox" />
+								<label for="ac-4">What does it cost to take a course? (It’s free!)</label>
+								<article class="ac-small">
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}'s courses are free to audit for everyone. ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} offers a free honour code certificate to anyone who meets the completion requirements.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-5" name="accordion-1" type="checkbox" />
+								<label for="ac-5">Are courses accessible to learners with disabilities?</label>
+								<article class="ac-medium">
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} strives to create an innovative online-learning platform that promotes accessibility for everyone, including learners with disabilities. We are dedicated to improving the accessibility of the platform and welcome your comments or questions on our official mailing address.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-6" name="accordion-1" type="checkbox" />
+								<label for="ac-6">Are courses only offered in English?</label>
+								<article class="ac-medium">
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} courses are  currently offered in Hindi and English both. Later we will be launching these courses in other regional Indian languages</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-7" name="accordion-1" type="checkbox" />
+								<label for="ac-7">I live somewhere that YouTube is not available. How can I watch the videos?</label>
+								<article class="ac-medium">
+								<p>In locations where YouTube is restricted, ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} videos may not be available for streaming. The video segments are frequently available for download, however. Click the “download here” link below each video segment to download the file for viewing.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-8" name="accordion-1" type="checkbox" />
+								<label for="ac-8">Can I access ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} courses on my smart phone or tablet computer?</label>
+								<article class="ac-small">
+								<p>At this time, ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} does not fully support access with mobile devices. While many components of your courses will function, some may not.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-9" name="accordion-1" type="checkbox" />
+								<label for="ac-9">Is there a walk-through of a sample course session?</label>
+								<article class="ac-small">
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} offers a fun demo course that walks you through how to navigate your course. Register for <a href="#" target="_blank" class="links-active2">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} Demo Course</a> and check it out!</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-10" name="accordion-1" type="checkbox" />
+								<label for="ac-10">I didn’t finish the Demo course, can I still start my other courses?</label>
+								<article class="ac-small">
+								<p>Yes! The Demo course was created to give you an overview of how ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} courses work. It is not mandatory to finish it.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-11" name="accordion-1" type="checkbox" />
+								<label for="ac-11">What happens if I have to quit a course? Will I be able to take the same or another course in the future?</label>
+								<article class="ac-small">
+								<p>You may unregister from ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} course at anytime. There are absolutely no academic penalties associated with incomplete ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} studies. You may register for the same course (provided we are still offering it) at a later time.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-12" name="accordion-1" type="checkbox" />
+								<label for="ac-12">What is the ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} Honour Code?</label>
+								<article class="ac-small">
+								<p>You’ll find the ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} <a href="${marketing_link('TOS')}" class="links-active2" target="_blank"> Honour Code here</a>. Each course may also have specific agreements for learner collaboration and discussion.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-13" name="accordion-1" type="checkbox" />
+								<label for="ac-13">How can I help improve ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}?</label>
+								<article class="ac-large">
+								<p>The ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} platform has been specifically designed to not only teach, but also gather data about learning. ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} will use this data to find out how to improve education online and on-campus. Just by taking a course you are helping ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}. Thank you!<br>If you enjoyed your experience with ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}, we encourage you to share your insights and enthusiasm with us and others (in-person and online). You can share your learner stories  with us at&nbsp;<a href="#" class="links-active">info@<font class="site_name">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}</font>.in</a></p>
+								</article>
+								</div>
+								
+								<br><p><strong>THE COURSES</strong></p>
+								
+								<div>
+								<input id="ac-14" name="accordion-1" type="checkbox" />
+								<label for="ac-14">When does my course start and/or finish?</label>
+								<article class="ac-medium">
+								<p>You can find the start date and course duration for each course on its Course Description page. If you are registered for a course, you’ll also see its start date on your dashboard. A course may start at any time, throughout the day, on its start date. If you find your course is not immediately available, please check back later in the day. Course timing is flexible. You do not need to log in exactly when the course begins.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-15" name="accordion-1" type="checkbox" />
+								<label for="ac-15">How do I log in to take an ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} course?</label>
+								<article class="ac-medium">
+								<p>Once you sign up for a course and activate your account, click on the Log In button on the ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} Home Page and type in your email address and ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} password. This will take you to your dashboard, with access to each of your active courses. (Before a course begins, it will be listed on your dashboard but you will not have a “view course” option as yet.)</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-16" name="accordion-1" type="checkbox" />
+								<label for="ac-16">How much work will I have to do to pass my course?</label>
+								<article class="ac-small">
+								<p>The projected hours of study required for each course are usually included on the course description page. If they are not listed, please check your syllabus or course discussion forum when your course begins.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-17" name="accordion-1" type="checkbox" />
+								<label for="ac-17">What should I do before I take a course (prerequisites)?</label>
+								<article class="ac-small">
+								<p>Each course is different - some have prerequisites, and some don't. Take a look at your specific course’s recommended prerequisites on the course description page. If you do not meet a particular prerequisite, you may still take the course.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-18" name="accordion-1" type="checkbox" />
+								<label for="ac-18">What books should I read? (I am interested in reading materials before the class starts)</label>
+								<article class="ac-medium">
+								<p>All required academic materials will be provided during the course, within your browser. Some courses may list additional resources on their course description pages. For supplementary reading material during a course, post a question in the course discussion forum to ask your classmates and course faculty for suggestions.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-19" name="accordion-1" type="checkbox" />
+								<label for="ac-19">Can I download the book for my course?</label>
+								<article class="ac-small">
+								<p>Unless specifically noted in the course, ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} book content may only be viewed within the browser. Downloading it violates copyright laws. If you need or want a hard copy of the book, you may want to consider purchase a copy.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-20" name="accordion-1" type="checkbox" />
+								<label for="ac-20">Can I take more than one course at a time?</label>
+								<article class="ac-small">
+								<p>Yes! You may take multiple ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} courses. We recommend checking the requirements on each course description page to balance your available study hours and the demands of the intended courses.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-21" name="accordion-1" type="checkbox" />
+								<label for="ac-21">What time is the class?</label>
+								<article class="ac-medium">
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} courses take place at your convenience. Lectures and assignments are available 24 hours a day, which means you can watch videos and complete work whenever you have time. Simply log in to your course and work through the course material. While assignments and exams often have due dates, these are designed to offer enough lead time that you can easily schedule your work.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-22" name="accordion-1" type="checkbox" />
+								<label for="ac-22">If I miss a week, how does this affect my performance?</label>
+								<article class="ac-small">
+								<p>It is certainly possible to pass an ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} course if you miss a week; however, coursework is progressive, so you should review and study what you may have missed. Also, assignments and exams may not be submitted after their due dates. Check your course syllabus for important dates and times.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-23" name="accordion-1" type="checkbox" />
+								<label for="ac-23">I missed a deadline; can I get an extension?</label>
+								<article class="ac-small">
+								<p>We are not able to offer individual extensions as course schedules are fixed and there is no way to change the dates of assignments or exams for one learner. Most courses allow learners to drop two weeks worth of homework or lab exercises from the final course grade. See your course's Grading policy for details.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-24" name="accordion-1" type="checkbox" />
+								<label for="ac-24">My course deadlines are in UTC, what’s that?</label>
+								<article class="ac-small">
+								<p>UTC refers to Universal Coordinated Time. To find the current time in UTC and convert it to your local time, check World Time Server or other Internet time services.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-25" name="accordion-1" type="checkbox" />
+								<label for="ac-25">What if I have a question or concern regarding course grading?</label>
+								<article class="ac-medium">
+								<p>All questions regarding grading and course content are best addressed in your course discussion forum. It is there that course staff can directly read and respond to your query.<br>Note: Most ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} courses post their grading policy in the course syllabus. Both the syllabus and the discussion forum are available once your class has begun.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-26" name="accordion-1" type="checkbox" />
+								<label for="ac-26">How can I meet/find other learners?</label>
+								<article class="ac-small">
+								<p>All ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} courses have discussion forums where you can chat with and help other learners within the framework of the honour code.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-27" name="accordion-1" type="checkbox" />
+								<label for="ac-27">How can I talk to faculty, teaching assistant(Tas) and supporting staff?</label>
+								<article class="ac-small">
+								<p>The discussion forum is the best place to reach out to the ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} teaching team for your class; just post your questions. We do our best to respond as promptly as possible.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-28" name="accordion-1" type="checkbox" />
+								<label for="ac-28">How do I get help and support regarding my course?</label>
+								<article class="ac-medium">
+								<p>You have a global community of classmates you can engage with questions (within the framework of the honour Code) as well as support from the TAs who monitor the course. Take a look at the Course's Discussion forum where you can review questions, answers and comments from fellow learners, as well as post a question.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-29" name="accordion-1" type="checkbox" />
+								<label for="ac-29">Can I re-take a course?</label>
+								<article class="ac-small">
+								<p>Yes! You may re-take ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} courses as often as you wish and you will have the opportunity to earn a certificate each time. Each offering of a course is assessed independently.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-30" name="accordion-1" type="checkbox" />
+								<label for="ac-30">Will the same courses be offered again in the future?</label>
+								<article class="ac-small">
+								<p>Most ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} courses will be re-offered and more courses added on a regular basis. If you are registered with ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}, you’ll receive email updates regarding new and re-offered courses.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-31" name="accordion-1" type="checkbox" />
+								<label for="ac-31">A course that I am interested has already started. Can I still enroll?</label>
+								<article class="ac-small">
+								<p>Yes, but you will not be able to turn in any assignments or exams that are past due. If it is early in the course, you might still be able to complete enough assignments and exams to earn a certificate. Check the Course Syllabus and Grading policy in order to find out more.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-32" name="accordion-1" type="checkbox" />
+								<label for="ac-32">What is an archived/past course?</label>
+								<article class="ac-small">
+								<p>Many of ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}'s already-conducted courses will be available as archives, later. These courses can only be audited and some features, such as the discussion forums, may not be available. No certificates are available for archived courses.</p>
+								</article>
+								</div>
+								
+								<br><p><strong>CERTIFICATES & CREDITS</strong></p>
+								
+								<div>
+								<input id="ac-33" name="accordion-1" type="checkbox" />
+								<label for="ac-33">What types of certificates does ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} offer?</label>
+								<article class="ac-small">
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} offers only Honour Code certificates of achievement, after the course is completed. Audit certificates are also given for participation in the course.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-34" name="accordion-1" type="checkbox" />
+								<label for="ac-34">How do I audit a course?</label>
+								<article class="ac-medium">
+								<p>Register for the course on our website and you can audit all courses free. You will have access to videos, lectures, readings, etc., and can participate as much, or as little, as you like. There is no penalty for registering for a ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} course and not completing the assignments or exams.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-35" name="accordion-1" type="checkbox" />
+								<label for="ac-35">What is an honour code certificate of achievement?</label>
+								<article class="ac-small">
+								<p>An honour code certificate of achievement certifies that you have successfully completed a course, but does not verify your identity. Honour code certificates are currently free.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-36" name="accordion-1" type="checkbox" />
+								<label for="ac-36">Will my certificate include a grade and/or number of credit hours?</label>
+								<article class="ac-small">
+								<p>Not currently, but we may consider including that in the future.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-37" name="accordion-1" type="checkbox" />
+								<label for="ac-37">What if something (like illness or computer problems) prevents me from passing my course?</label>
+								<article class="ac-small">
+								<p>Try, try and try again till the course is available on ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-38" name="accordion-1" type="checkbox" />
+								<label for="ac-38">Can I get a paper copy of my certificate?</label>
+								<article class="ac-small">
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} does not send individual printed copies of certificates. You can, however, print out your PDF copy.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-39" name="accordion-1" type="checkbox" />
+								<label for="ac-39">Will my university accept my ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} coursework for credit?</label>
+								<article class="ac-small">
+								<p>The honour code certificates are meant for your own benefit. This certificate is not meant for credit recognition by academic institutions or universities.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-40" name="accordion-1" type="checkbox" />
+								<label for="ac-40">How are certificates determined?</label>
+								<article class="ac-medium">
+								<p>A learner who receives a passing grade for a course will receive an honour code certificate at the discretion of CDEEP and IIT Bombay. This is provided they complete all the required quizzes, assignments and exams in the course, within the timelines defined by the course.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-41" name="accordion-1" type="checkbox" />
+								<label for="ac-41">How are ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} certificates delivered?</label>
+								<article class="ac-small">
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} certificates are delivered online through the ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} website. Once course grades are finalized, if you qualify for a certificate, you will see it available for download on your dashboard.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-42" name="accordion-1" type="checkbox" />
+								<label for="ac-42">Why did I not receive my certificate?</label>
+								<article class="ac-small">
+								<p>Certificates are usually delivered within two weeks of when the course closes. If you did not receive one in this time and are certain that you completed the requirements, please check your dashboard. The certificate will display with your course.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-43" name="accordion-1" type="checkbox" />
+								<label for="ac-43">I lost my ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} certificate – can you resend it to me?</label>
+								<article class="ac-small">
+								<p>Please log back in to your account and dashboard. You will be able to view and download your certificate from there.</p>
+								</article>
+								</div>
+								
+								<br><p><strong>OTHER HELP QUESTIONS - ACCOUNT QUESTIONS</strong></p>
+								
+								<div>
+								<input id="ac-44" name="accordion-1" type="checkbox" />
+								<label for="ac-44">What if my username is taken?</label>
+								<article class="ac-small">
+								<p>Please try a different username - for example, try adding a random number to the end.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-45" name="accordion-1" type="checkbox" />
+								<label for="ac-45">What if I am having login problems (password/email unrecognized)?</label>
+								<article class="ac-small">
+								<p>Please make sure that you have a current version of Firefox, Chrome, or Internet Explorer with cookies and JavaScript enabled. Also, try clearing your browser’s cache.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-46" name="accordion-1" type="checkbox" />
+								<label for="ac-46">What if I forget my password?</label>
+								<article class="ac-small">
+								<p>You’ll find a “Forgot password?” link under the Password field on the Login screen. Click this link and enter your email address. We’ll send a message that will allow you to reset your password.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-47" name="accordion-1" type="checkbox" />
+								<label for="ac-47">What if I did not receive an activation email or password reset?</label>
+								<article class="ac-elarge">
+								<p>If you did not receive an automated email it may be because:<br><br>
+								- There was a typo in your email address.<br>
+								- Your spam filter may have caught the email. Please check your spam folder.<br>
+								- You may be using an older browser. We recommend downloading the current version of Firefox or Chrome.<br>
+								- JavaScript is disabled in your browser. Please check your browser settings and confirm that JavaScript is enabled.<br>You have not successfully registered an account on '${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}' website. Please try registering again with the same email address. (If an account already exists, you'll see an error regarding a duplicate email address.)<br><br>If you continue to have problems activating your account, we recommend that you try creating a new account. There is no need to do anything about the old account. If it is not activated through the link in the email, it will disappear later.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-48" name="accordion-1" type="checkbox" />
+								<label for="ac-48">Can I delete my account?</label>
+								<article class="ac-small">
+								<p>There's no need to delete your account. An old, unused ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} account with no course completions associated with it, will disappear.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-49" name="accordion-1" type="checkbox" />
+								<label for="ac-49">What if I have problems with the display (eg, there are tools missing from the course display, or I am unable to view video)?</label>
+								<article class="ac-small">
+								<p>Please check your browser and settings - JavaScript must be enabled. We recommend downloading and using the current version of either Firefox or Chrome or IE >9.0.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-50" name="accordion-1" type="checkbox" />
+								<label for="ac-50">What if my question isn’t answered here?</label>
+								<article class="ac-small">
+								<p>Please <a href="${marketing_link('CONTACT')}" class="links-active2" target="_blank">Contact Us</a>! We’ll do our best to help.</p>
+								</article>
+								</div>
+								
+								<div>
+								<input id="ac-51" name="accordion-1" type="checkbox" />
+								<label for="ac-51">Will there be courses from other institutions/universities?</label>
+								<article class="ac-large">
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} primarily intends to offer courses from IIT Bombay and teacher training workshops, from IIT Bombay and IIT Kharagpur. Courses from other institutions/universities are expected to be offered soon on the national platform, ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}. A few such courses will be offered on this ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} platform on a pilot basis, as a part of the commitment to the National Mission on Education using ICT (NMEICT). It may be noted that that the content and running of such courses is entirely the responsiblity of the institutional universities which offer these courses. ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} will not be responsible for the conduct of any of such courses.</p>
+								</article>
+								</div>
+
+								</section>
+								</div>
+								
+								</div>
+								</section>
+								</td>
+								
+								</tr>
+								
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</section>
+</body>
+</html>

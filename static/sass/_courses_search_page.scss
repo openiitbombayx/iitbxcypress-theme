@@ -1,0 +1,54 @@
+//IITBombayX-2015, This file is created by Nitin Ayer, it contains CSS related to courses.html page.
+
+.courses_search_page {
+  header.global {
+   position: fixed;
+   top: 0px;
+   z-index: 200;
+  }
+
+  header.global nav {
+   max-width: 1170px;
+   width: 1170px;
+  }
+
+ .content-wrapper {
+   padding-bottom: 0px;
+   margin-top: 76px;
+  }
+
+ .courses-container{
+   max-width: 1170px;
+  } 
+
+ .wrapper-footer footer {
+   width: 1170px !important;
+   max-width: 1170px !important;
+   padding: 0px 15px 0px 15px;
+  }
+
+ //.wrapper-footer footer .open-edx_logo, .courses_about_page #footer-openedx .open-edx_logo {
+   //padding-top: 1.8em !important;
+  //}
+
+ .courses-container .courses:not(.no-course-discovery){
+   width: 75% !important;
+   background: $course_block-bg;
+   padding-right: 7px;
+   margin-right: 13px !important;
+   padding-top: 0px;
+   margin-top: 40px;
+  }
+
+ .courses-listing .courses-listing-item{
+   margin: 15px 8px 15px 7px !important;
+  }
+
+ .courses-listing .courses-listing-item:nth-child(3n){
+   margin-right: 0px !important;
+  }
+
+ .search-facets.phone-menu{
+   margin-top: 40px;
+  }
+}

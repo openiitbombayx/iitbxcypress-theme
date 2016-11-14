@@ -1,0 +1,760 @@
+//IITBombayX-2015, This file is created by Nitin Ayer, it contains CSS related to Courses page.
+
+.courses_page {
+ header.global {
+  position: fixed;
+  top: 0px;
+ }
+
+  header.global nav {
+   width: 960px;
+ }
+ .wrapper-footer footer {
+   width: 960px !important;
+ }
+
+ .wrapper-footer footer .open-edx_logo, #footer-openedx .open-edx_logo {
+   padding-top: 40px !important;
+ }
+
+ .content-wrapper {
+  padding-bottom: 0px;
+  margin-top: 76px;
+ }
+
+ .inner-content {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+
+ }
+
+ .inner-content_banner {
+   width: 1000px;
+   margin: auto;
+ }
+
+ .homebanner {
+  background: $courses_image01 no-repeat;
+  background-size: 100% 100%;
+  width: 960px;
+  height: 124px;
+  margin-top: 0px;
+  border-bottom: 1px solid $border-color-l1;
+  background-color: $white;
+  margin: auto;
+ }
+
+ .courses_bannertext_container {
+  width: auto;
+  margin: 0px;
+  padding-top: 0px;
+ }
+
+ .bannertext_innercontainer {
+  width: 960px;
+  margin: auto;
+  margin-top: 0px;
+  height: 124px;
+  overflow: hidden;
+ }
+
+ .courses_bannertext {
+  position: relative;
+  top: 35px;
+  left: 30px;
+ }
+
+ .courses_tagline_one {
+  margin: 0px 0px -10px;
+  font-family: $font_family1;
+  font-size: 24px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: $button-color;
+ }
+
+ .courses_tagline_two {
+   color: $dark-gray1;
+   font-size: 18px;
+   position: relative;
+   left: 45px;
+   font-weight: 500;
+   margin: 2px 0px -10px;
+   font-family: $font_family1;
+   line-height: 1.5em;
+ }
+
+ .main_content{
+   width: 960px;
+   height: auto;
+   margin: auto;
+   background: $white;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+ }
+
+ .course_filter {
+   background-color: $table-coloumn_bg;
+   border-bottom: 1px solid $border-color-l1;
+   color: $gray-4;
+   font-size: 14.4px;
+   overflow: auto;
+   padding: 20px 25px 20px 90px;
+ }
+
+ #coursefilter-form {
+   float: right;
+   margin: 0px;
+   padding: 0px;
+ }
+
+ .item_link {
+   display: inline-block;
+   margin: 0px;
+   padding: 0px 14.4px 0px 0px;
+   vertical-align: middle;
+ }
+
+ .item_link ul {
+  list-style: none outside none;
+  margin: 0px;
+  padding: 0px;
+ }
+
+/*IITBombayX-2016 Course sorting options highlight added*/ 
+/* .item_link a {
+  color: $gray-4;
+  text-decoration: none;
+ }
+
+ .item_link a:hover{
+   color: $link-color;
+   text-decoration: none;
+ }*/
+
+ .course_sort {
+  color: $gray-4;
+  text-decoration: none;
+ }
+
+ .course_sort:hover{
+   color: $link-color;
+   text-decoration: none;
+ }
+
+ .course_sort:visited{
+   text-decoration: none;
+ }
+
+ .course_sort_select {
+  color: $button-color;
+  text-decoration: none;
+ }
+
+ .course_sort_select:hover{
+   color: $link-color;
+   text-decoration: none;
+ }
+
+ .course_sort_select:visited{
+   text-decoration: none;
+ }
+
+ .even, .odd{
+   border-left: 1px solid $border-color-l3;
+   float:left;
+   margin: 0px;
+   padding: 0px 7.2px;
+   text-transform: lowercase;
+ }
+
+ .item_link ul li:first-child {
+   border-left: none;
+ }
+
+ .item_subject{
+   color: $gray-4;
+   display: inline-block;
+   font-family: $font_family1;
+   font-size: 14.4px;
+   font-weight: 400;
+   line-height: 24px;
+   margin: 0px;
+   padding: 0px 14.4px 0px 0px;
+   vertical-align: middle;
+ }
+
+ #edit_subject{
+   background-position: 100% 50%;
+   background-repeat: no-repeat;
+   border: 1px solid  $gray-l2;
+   border-radius: 0px;
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 14.4px;
+   font-weight: 400;
+   line-height: 19px;
+   margin: 0px;
+   outline: 0px none $gray-4;
+   overflow: hidden;
+   padding-bottom: 4px;
+   padding-top: 4px;
+   text-overflow: ellipsis;
+   vertical-align: baseline;
+   white-space: nowrap;
+   width: 182px;
+   -moz-appearance: button;
+   -moz-user-select: none;
+ }
+
+ .form-submit {
+   background: $button-color none repeat scroll 0px 0px;
+   border: none;
+   border-radius: 2px;
+   box-shadow: none;
+   box-sizing: border-box;
+   color: $white;
+   background-image:none;
+   cursor: pointer;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 19px;
+   margin: 0px;
+   vertical-align: middle;
+   word-wrap: break-word;
+   padding: 6px 20px;
+   text-shadow:none;
+ }
+
+ .form-submit:hover{
+   background-color: $link-color;
+   background-image: none;
+   box-shadow: none;
+ }
+
+ .form-submit:focus:not(:disabled) {
+   box-shadow: none !important;
+ }
+
+//-------Page below the button------
+
+ .inner_region_content{
+   margin: 0px;
+   padding: 20px;
+ }
+
+ .view_content{
+   width: 100%;
+ }
+
+ .view_row_course{
+   width: 100%;
+   border: 1px solid $border-color-l1;
+   color: $gray-4;
+   margin-bottom: 30px;
+   min-width: 262px;
+   display: inline-block;
+   word-wrap: break-word;
+ }
+
+ .left_course_view_fieldset{
+   max-width: 630px;
+   padding: 10px;
+   width: 630px;
+   display: inline-block;
+   float: left;
+ }
+
+ .right_course_view_fieldset{
+   border-left: 1px solid $border-color-l1;
+   float:right;
+   //position: relative;
+   //width: 265px;
+   max-width: 265px;
+   display: inline-block;
+   float: right;
+ }
+
+ #multilinedText {
+   //margin: 50px;
+   //padding: 10px;
+   //width: 180px;
+   height: 90px;
+   text-align: justify;
+   line-height: 1.4em;
+ }
+
+ .view_header{
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   padding-bottom: 16px;
+   padding-left: 0px;
+   padding-right: 0px;
+   padding-top: 0px;
+   word-wrap: break-word;
+ }
+
+ .view_header strong{
+   color: $black;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 24px;
+   word-wrap: break-word;
+ }
+
+ .new_course_ribbon{
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   height: 29px;
+   line-height: 24px;
+   position: absolute;
+   width: 30px;
+   word-wrap: break-word;
+ }
+
+ .image{
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   word-wrap: break-word;
+ }
+
+ .image a{
+   color: $button-color;
+   display: block;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   text-decoration: none;
+   word-wrap: break-word;
+   -moz-text-decoration-color: $button-color;
+   -moz-text-decoration-line: none;
+   -moz-text-decoration-style: solid;
+ }
+
+ .image_style_none{
+   border: 0px none $button-color;
+   color: $button-color;
+   display: block;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   height: 140px;
+   line-height: 24px;
+   max-width: 265px;
+   word-wrap: break-word;
+ }
+
+ .learnmore_link{
+   bottom: 0px;
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   //position: absolute;
+   //width: 264px;
+   word-wrap: break-word;
+ }
+
+  input[type="submit"]:hover:not(:disabled) {
+   //color: #FFF;
+   //text-decoration: none;
+   background-image: none;
+   background-color: $link-color;
+ }
+
+  input[type="submit"] {
+   background: $m-gray none repeat scroll 0px 0px;
+   border: 0px none $white;
+   border-radius: 0px;
+   box-sizing: border-box;
+   box-shadow: none;
+   width: 100%;
+   color: $white;
+   font-size: 18px;
+   font-weight: 300;
+   text-decoration: none;
+   text-shadow: none;
+   line-height: 24px;
+   padding: 13px 20px;
+   text-transform: none;
+   letter-spacing: normal;
+ }
+
+  input[type="submit"]:focus:not(:disabled) {
+   box-shadow: none !important;
+ }
+
+ .new_course_ribbon img{
+   border: 0px none $gray-4;
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   height: 22px;
+   line-height: 24px;
+   max-width: 30px;
+   word-wrap: break-word;
+ }
+
+ .top_view_fieldset{
+   color: $gray-4;
+   font-size: 12.8px;
+   margin: 0px;
+   max-height: 140px;
+   height: 140px;
+   padding: 0px;
+   word-wrap: break-word;
+ }
+
+ .link_courses_page{
+   margin: 0px;
+   padding: 0px;
+   text-align: right;
+   line-height: 1em;
+   padding-top:8px;
+ }
+
+ .title_course_title {
+   border: 0px none $m-gray-d4;
+   text-transform: none;
+   color: $m-gray-d4;
+   font-family: $font_family1;
+   font-size: 17.6px;
+   font-weight: 400;
+   line-height: 17.6px;
+   margin: 0px;
+   overflow: hidden;
+   padding: 0px 0px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   word-wrap: break-word;
+ }
+
+ strong { 
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 17.6px;
+   font-weight: 700;
+   line-height: 17.6px;
+   white-space: nowrap;
+   word-wrap: break-word;
+ }
+
+ .title_course_title a{
+   border: 0px none $gray-4;
+   color: $gray-4;
+   font-size: 17.6px;
+   font-weight: 700;
+   line-height: 17.6px;
+   text-decoration: none !important;
+   white-space: nowrap;
+   word-wrap: break-word;
+ }
+
+ .course_sub_title{
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 12.8px;
+   font-weight: 400;
+   line-height: 19.2px;
+   word-wrap: break-word;
+ }
+
+ .bottom_view_fieldset{
+   background: $gray-2 none repeat scroll 0px 0px;
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 12.8px;
+   font-weight: 400;
+   //line-height: 30px;
+   //margin-left: 30px;
+   overflow: hidden;
+   padding-left: 15px;
+   word-wrap: break-word;
+ }
+
+ .bottom_view_fieldset ul li{
+   display: inline-block;
+   margin-right: 15px;
+ }
+
+.clearfix{
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 12.8px;
+   font-weight: 400;
+   //line-height: 30px;
+   list-style: outside none none;
+   margin: 0px;
+   padding: 0px;
+   word-wrap: break-word;
+   //display:inline-block;
+ }
+
+ .first {
+   color: $gray-4;
+   float:left;
+   font-family: $font_family1;
+   font-size: 12.8px;
+   font-weight: 400;
+   //line-height: 30px;
+   list-style: outside none none;
+   margin-right: 15px;
+   word-wrap: break-word;
+ }
+
+ .label {
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 12.8px;
+   font-weight: 700;
+   line-height: 30px;
+   list-style: outside none none;
+   text-transform: uppercase;
+   word-wrap: break-word;
+ }
+
+ .college_name {
+   color: $black;
+   font-family: $font_family1;
+   font-size: 12.8px;
+   font-weight: 700;
+   line-height: 30px;
+   list-style: outside none none;
+   word-wrap: break-word;
+ }
+
+// Next Page Number Styling List 
+
+ .below_page_number_item_list {
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   word-wrap: break-word;
+ }
+
+ .pager li a {
+   color: $button-color;
+   text-decoration: none;
+ }
+
+ .pager li a:hover {
+   border-bottom:1px dotted $link-color;
+ }
+
+ .pager {
+   clear: both;
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   margin: 0px 0px 12px 0px;
+   padding: 8px 0px 8px 0px;
+   text-align: center;
+   word-wrap: break-word;
+ }
+
+ .page_current_even_first{
+   background-image: none;
+   color: $gray-4;
+   display: inline;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 24px;
+   list-style-type: none;
+   margin: 0px;
+   padding: 8px;
+   text-align: center;
+   word-wrap: break-word;
+ }
+
+ .page_item_odd{
+   background-image: none;
+   color: $gray-4;
+   display: inline;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   list-style-type: none;
+   margin: 0px;
+   padding: 8px;
+   text-align: center;
+   word-wrap: break-word;
+ }
+
+ .page_item_even {
+   background-image: none;
+   color: $gray-4;
+   display: inline;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   list-style-type: none;
+   margin: 0px;
+   padding: 8px;
+   text-align: center;
+   word-wrap: break-word;
+ }
+
+ .page_item_ellipsis_odd {
+   background-image: none;
+   color: $gray-4;
+   display: inline;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   list-style-type: none;
+   margin: 0px;
+   padding-top: 8px;
+   text-align: center;
+   word-wrap: break-word;
+ }
+
+ .page_item_next_even{
+   background-image: none;
+   color: $gray-4;
+   display: inline;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   list-style-type: none;
+   margin: 0px;
+   padding: 8px;
+   text-align: center;
+   word-wrap: break-word;
+ }
+
+ #forward-arrow{
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing:0px;
+ }
+
+ .page_item_last_odd {
+   background-image: none;
+   color: $gray-4;
+   display: inline;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   list-style-type: none;
+   margin: 0px;
+   padding: 8px;
+   text-align: center;
+   word-wrap: break-word;
+ }
+
+ .page_item_last_odd{
+   background-image: none;
+   color: $gray-4;
+   display: inline;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   list-style-type: none;
+   margin: 0px;
+   padding: 8px;
+   text-align: center;
+   word-wrap: break-word;
+ }
+
+ .pagination {
+   margin: auto;
+   width: auto;
+   text-align: center;
+   font-family: $font_family1;
+ }
+
+ .pagination span a{
+   text-decoration: none !important;
+ }
+
+/*IITBombayX-2016 next and previous button CSS added */
+ .next_button input[type="submit"]{
+   background: $button-color none repeat scroll 0px 0px;
+   border: none;
+   border-radius: 2px;
+   box-shadow: none;
+   box-sizing: border-box;
+   color: $white;
+   background-image:none;
+   cursor: pointer;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: normal;
+   margin: 0px;
+   vertical-align: middle;
+   word-wrap: break-word;
+   padding: 6px 20px;
+   text-shadow:none;
+   width: 75px;
+   margin-left: 10px;
+ }
+
+ .next_button input[type="submit"]:hover:not(:disabled){ 
+   background-color: $link-color;
+   background-image: none;
+   box-shadow: none;
+ }
+
+ .next_button input[type="submit"]:focus:not(:disabled){
+   box-shadow: none !important;
+ }
+
+ .previous_button input[type="submit"]{
+   background: $button-color none repeat scroll 0px 0px;
+   border: none;
+   border-radius: 2px;
+   box-shadow: none;
+   box-sizing: border-box;
+   color: $white;
+   background-image:none;
+   cursor: pointer;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: normal;
+   margin: 0px;
+   vertical-align: middle;
+   word-wrap: break-word;
+   padding: 6px 20px;
+   text-shadow:none;
+   width: 105px;
+   margin-right: 10px;
+ }
+
+ .previous_button input[type="submit"]:hover:not(:disabled){
+   background-color: $link-color;
+   background-image: none;
+   box-shadow: none;
+ }
+
+ .previous_button input[type="submit"]:focus:not(:disabled){
+   box-shadow: none !important;
+ }
+}

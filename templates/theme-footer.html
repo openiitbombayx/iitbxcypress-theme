@@ -1,0 +1,104 @@
+## mako
+<%! from django.core.urlresolvers import reverse %>
+<%! from django.utils.translation import ugettext as _ %>
+<%! from django.conf import settings%>
+<%namespace name='static' file='static_content.html'/>
+<%! from microsite_configuration.templatetags.microsite import platform_name %>
+<!-- IITBombayX - using custom variable name for theme name instead of hard coding -->
+<!-- 06th Jan 2016 -->
+
+<!--IITBombayX-22/12/15, CSS for Footer is added in _footer.scss file.-->
+
+<div class="wrapper wrapper-footer">
+  <footer>
+    <div class="colophon">
+      <nav class="nav-colophon">
+      <ol>
+          <li class="nav-colophon-01">
+          <a id="about" href="${marketing_link('ABOUT')}">
+              ${_("About")}
+          </a>
+          </li>
+	  <!-- Bharat MOOCs -->
+          <li class="nav-colophon-02">
+          <a id="news" href="#" target="_blank">
+              ${_("News")}
+          </a>
+          </li>
+          <li class="nav-colophon-03">
+          <a id="blog" href="#" target="_blank">
+              ${_("Blog")}
+          </a>
+          </li>
+          <li class="nav-colophon-04">
+          <a id="faq" href="${marketing_link('FAQ')}">
+              ${_("FAQ")}
+          </a>
+          </li>
+          <li class="nav-colophon-05">
+          <a id="contact" href="${marketing_link('CONTACT')}">
+              ${_("Contact Us")}
+          </a>
+          </li>
+      </ol>
+      </nav>
+
+      <div class="colophon-about">
+<!-- Bharat MOOCs-->
+
+<!-- IITBombayX - using custom variable name for theme name instead of hard coding -->
+<!-- 06th Jan 2016 -->
+
+        <!--img src="${static.url('themes/iitbxcypress-theme/images/iitbombayxlogo_footer.png')}" alt="${_('{platform_name} Logo').format(platform_name=platform_name())}" /-->
+        <img src=${static.url('themes/'+settings.THEME_NAME+'/images/footerlogo.png')} alt="${_('{platform_name} Logo').format(platform_name=platform_name())}" width="92px" />
+
+
+        <p class="platform_text">${_("{platform_name}").format(platform_name=settings.PLATFORM_NAME)} ${_("offers interactive online classes and MOOCs. Subjects from multiple disciplines are presently offered, as can be seen in the list of courses. This list will expand later. {platform_name} is a non-profit online platform created with funding from National Mission on Education through Information and Communication Technology (NME-ICT), Ministry of Human Resource Development (MHRD), Government of India (GoI).").format(platform_name=platform_name())}</p> 
+      </div>
+    </div>
+
+    <div class="references">
+      <nav class="nav-social">
+        <ul>
+          <li class="nav-social-02">
+            <a href=${_('{platform_name}').format(platform_name=settings.PLATFORM_FACEBOOK_ACCOUNT)} target="_blank" rel="external">
+              <img src="${static.url('images/social/ico-social-facebook.png')}" alt="${_('{platform_name} on Facebook').format(platform_name=platform_name())}" />
+            </a>
+          </li>
+          <li class="nav-social-03">
+            <a href=${_('{tplatform_name}').format(tplatform_name=settings.PLATFORM_TWITTER_URL)}  target="_blank" rel="external">
+              <img src="${static.url('images/social/ico-social-twitter.png')}" alt="${_('{platform_name} on Twitter').format(platform_name=platform_name())}" />
+            </a>
+          </li>
+          <li class="nav-social-04">
+            <a href=${_('{gplatform_name}').format(gplatform_name=settings.PLATFORM_GOOGLE_PLUS_URL)} target="_blank" rel="external">
+              <img src="${static.url('images/social/ico-social-google.png')}" alt="${_('{platform_name} on Google+').format(platform_name=platform_name())}" />
+            </a>
+          </li>
+          <!--li class="nav-social-05">
+            <a href="#"  target="_blank" rel="external">
+              <img src="${static.url('images/social/ico-social-youtube.png')}" alt="edX on YouTube" />
+            </a>
+          </li-->
+        </ul>
+      </nav>
+
+      <!--p class="copyright" style="text-align:right; color:#050505; margin-bottom:11px;">${_("&copy; 2014 {platform_name}, except where noted, all rights reserved").format(platform_name=settings.PLATFORM_NAME)}</p-->
+
+      <nav class="nav-legal">
+        <ul>
+          <li class="nav-legal-01">
+            <a href="${marketing_link('TOS')}" id="tos" target="_blank">${_("Terms of Service and Honour Code")}</a>
+          </li>
+          <li class="nav-legal-02">
+            <a href="${marketing_link('PRIVACY')}" id="policy" target="_blank">${_("Privacy Policy")}</a>
+          </li>
+          <li class="nav-legal-03">
+            <a href="http://openedx.org" target="_blank"><img class="open-edx_logo" src="${static.url('images/edx-openedx-logo-tag.png')}" alt="Powered by Open edX" ></img></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</div>
+

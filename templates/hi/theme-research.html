@@ -1,0 +1,79 @@
+<%inherit file="../../main.html" />
+<!--Bharat Mooc  Language option Added -->
+<%include file='../../modal/_modal-settings-language.html'/>
+<%! from microsite_configuration import microsite %>
+<%namespace name='static' file='../../static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<%block name="pagetitle">अनुसंधान एवं शिक्षा-शास्‍त्र</%block>
+<%block name="bodyclass">research_page_hi</%block><!--IITBombayX-2016 Nitin Ayer, block is added to identify CSS in SCSS files-->
+<!--IITBombayX-2016, CSS for this page is written in _research_page.scss inside theme folder by Nitin Ayer-->
+
+<html>
+</head>
+<body>
+<section class="container about">
+	<div class="main_content">
+		<div class="banner"><img src=${static.url('themes/'+settings.THEME_NAME+'/images/about-us.png')} width="960px"></div>
+			<div class="wrapper">
+				<div class="wrapper-container">
+					<div class="wrapper-inner">
+						<div class="inner-class">
+							<div class="inner-content">
+								<table border="0" width="960px;" cellpadding="0" cellspacing="0">
+
+								<tr>
+
+								<td class ="table_column01" width="217px" valign="top">
+								<div class="sidebar">
+
+								<ul class="sidemenu">
+								<li><a class="links" href="${marketing_link('ABOUT')}">हमारे बारे में</a></li>
+								<li><a class="links-active" href="#">अनुसंधान एवं<br>शिक्षा-शास्‍त्र</a></li>
+								<li><a class="links" href="#" target="_blank">ब्‍लॅाग</a></li>
+								<li><a class="links" href="#" target="_blank">समाचार</a></li>
+								<li><a class="links" href="${marketing_link('FAQ')}">शिक्षार्थियों की प्रश्‍नोत्‍तरी</a></li>
+								<li><a class="links" href="${marketing_link('IITBOMBAYX_FAQ')}">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} की प्रश्‍नोत्‍तरी</a></li>
+								<li><a class="links" href="${marketing_link('MEMBER')}">Team</a></li>
+								<li><a class="links" href="${marketing_link('CONTACT')}">संपर्क-सूत्र</a></li>
+								</ul>
+
+								</div>
+								</td>
+
+								<td class ="table_column02" width="743px">
+								<section class="inner-section">
+
+								<h2 class="field-page-tagline view-mode-full">अनुसंधान एवं शिक्षा-शास्‍त्र</h2>
+
+								<div class="field-page-body view-mode-full">
+
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} अध्ययन कला या सीखने के बारे में सीखने के सशक्तिकरण पर अनुसंधान कर रहा है।</p>
+								<p>ऑनलाइन वातावरण प्रयोगों का संचालन करने के लिए एक सशक्त मंच प्रदान करता है, शिक्षार्थी कैसे सीखते है, एवं प्राध्यापक कैसे नवीनतम आदर्श टूल्स एवं तकनीकों का उपयोग कर उच्च गुणवत्ता की शिक्षा प्रदान कर सकें।</p>
+								<p>मूलभूत प्रश्‍नों में सम्मिलित है: </p>
+
+								<ul class="ul-class">
+								<li>शिक्षार्थियों को सीखने एवं सीखना जारी रखने हेतु क्या प्रोत्साहित करता है?</li>
+								<li>शिक्षार्थियों को ज्ञान ग्रहण करने हेतु क्या सहायक है?</li>
+								<li>जटिल तर्कों को पढ़ाने की उत्तम विधि क्या है?</li>
+								<li>हम यह कैसे ज्ञात कर सकते हैं कि शिक्षार्थियों नें क्या सीखा?</li>
+								<li>पारंपरिक एवं ऑनलाइन शिक्षण में उत्तम क्या है?</li>
+								</ul>
+
+								<p>पाठ्यक्रम के निष्कर्ष को उन्नत करने के परम उद्देश्य के साथ,पाठ्यक्रम के आंकड़ों का ध्यानपूर्वक आंकलन करके,माउस की क्लिक से कार्य में व्यतीत किये गये समय तक, शिक्षार्थियों द्वारा विभिन्न आंकलनों के लिये कैसी प्रतिक्रिया दी गई इसका मूल्यांकन कर, शोधकर्ताओं द्वारा इस बारे में प्रकाश डालने की कोशिश करते है, कि शिक्षार्थी किस प्रकार मुख्य विषय-वस्तु की जानकारी ग्रहण करते हैं।</p>
+								<p>हम केवल ज्ञान तक पहुंच का विस्तार नहीं कर रहे हैं, अपितु शिक्षार्थियों के अनुभवों में वृद्धि करने, एवं पारंपरिक तथा ऑनलाइन शिक्षण के माध्यम से सीखने को उन्नत कर रहे हैं। </p>
+								</div>
+								</section>
+								</td>
+
+								</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<%inherit file="../../main.html" />
+<%include file='../../modal/_modal-settings-language.html'/>
+<%! from microsite_configuration import microsite %>
+<%namespace name='static' file='../../static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<%block name="pagetitle">शिक्षार्थियों की प्रश्‍नोत्‍तरी</%block>
+
+<%block name="bodyclass">learners_faq_hi</%block><!--IITBombayX-2016 Nitin Ayer, block is added to identify CSS in SCSS files-->
+<!--IITBombayX-2016, CSS for this page is written in _learners_faq_page.scss inside theme folder by Nitin Ayer-->
+
+<html>
+<head>
+</head>
+<body>
+<section class="container about">
+	<div class="main_content">
+		<div class="banner"><img src=${static.url('themes/'+settings.THEME_NAME+'/images/FAQ/faq_banner.png')} width="960px"></div>
+			<div class="wrapper">
+				<div class="wrapper-container">
+					<div class="wrapper-inner">
+						<div class="inner-class">
+							<div class="inner-content">
+								<table border="0" width="960px;" cellpadding="0" cellspacing="0">
+
+								<tr>
+
+								<td class ="table_column01" width="217px" valign="top">
+								<div class="sidebar">
+
+								<ul class="sidemenu">
+								<li><a class="links" href="${marketing_link('ABOUT')}">हमारे बारे में</a></li>
+								<li><a class="links" href="${marketing_link('RESEARCH')}">अनुसंधान एवं<br>शिक्षा-शास्‍त्र</a></li>
+								<li><a class="links" href="#" target="_blank">ब्‍लॅाग</a></li>
+								<li><a class="links" href="#" target="_blank">समाचार</a></li>
+								<li><a class="links-active" href="#">शिक्षार्थियों की प्रश्‍नोत्‍तरी</a></li>
+								<li><a class="links" href="${marketing_link('IITBOMBAYX_FAQ')}">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} की प्रश्‍नोत्‍तरी</a></li>
+								<!-- IITBombayX Cypress Dec 2015 -->
+								<li><a class="links" href="${marketing_link('MEMBER')}">Team</a></li>
+								<li><a class="links" href="${marketing_link('CONTACT')}">संपर्क-सूत्र</a></li>
+								</ul>
+
+								</div>
+								</td>
+
+								<td class ="table_column02" width="743px">
+								<section class="inner-section">
+
+								<h2 class="field-page-tagline view-mode-full">शिक्षार्थियों की प्रश्‍नोत्‍तरी</h2>
+
+								<div class="field-page-body view-mode-full">
+
+								<p>हमारा लक्ष्य है कि आपको सर्वोत्तम स्व-सहायता टूल्स प्रदाय करें जिससे आपकी सफलता सुनिश्चित हो जाये। क्या इसे पढ़ने के पश्चात आपको अभी भी सहायता की आवश्यकता है? कृपया प्रश्न हमारे&nbsp;<a href="${marketing_link('CONTACT')}" class="links-active" target="_blank">संपर्क-सूत्र</a>&nbsp;पृष्ठ के माध्यम से अंतरित करें अथवा यदि आप एक वर्तमान शिक्षार्थी है, तो अपने प्रश्न पाठ्यक्रम की चर्चा के मंच के माध्यम से पोस्ट करें।</p>
+
+								<p><strong>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के मूलभूत</strong></p>
+                          
+								<div>
+								<section class="ac-container">
+
+								<div>
+								<input id="ac-1" name="accordion-1" type="checkbox" />
+								<label for="ac-1">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} का पाठ्यक्रम कौन ले सकते हैं? मैं साइन अप कैसे करूँ?</label>
+								<article class="ac-medium">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के पाठ्यक्रम सभी के लिए उपलब्ध हैं। इस हेतु आपके पास कम्‍प्‍यूटर इन्‍टरनेट एवं ब्राउजर के वर्तमान संस्‍करण होने के साथ-साथ सीखने की दृढ इच्‍छा शक्ति का होना आवश्‍यक है। <br>साइन-अप के लिए, एक ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} खाता बनायें तत्‍पश्‍चात् अपने चुनिन्‍दा पाठ्यक्रम हेतु पंजीकृत करें। आरंभ हेतु अभी पंजीकृत का चयन करें, पंजीकरण नि:शुल्‍क है!</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-2" name="accordion-1" type="checkbox" />
+								<label for="ac-2">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} पाठ्यक्रम के साथ उपयोग हेतु कौन-कौन से ब्राउजर समर्थन करते हैं?</label>
+								<article class="ac-small">
+								<p>हमारे पाठ्यक्रम की विषय-वस्तु क्रोम, फायरफॉक्स के वर्तमान संस्करण के साथ अथवा सफारी या इंटरनेट एक्सप्लोरर संस्करण 9 और अधिक, के साथ बेहतर कार्य करता है।</p>
+								</article>
+								</div>
+
+
+								<div>
+								<input id="ac-3" name="accordion-1" type="checkbox" />
+								<label for="ac-3">क्‍या होगा यदि मुझे पंजीकरण, लॉग-इन, अथवा पाठ्यक्रम अभिगमन के साथ तकनीकी परेशानियाँ होती हैं?</label>
+								<article class="ac-large">
+								<p>पंजीकरण, लॉग-इन, अथवा ' ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}' पाठ्यक्रम में अभिगमन के साथ कई समस्यायें ब्राउज़र के कारण श्रजित होती है। यहां ध्यान देने हेतु कुछ बिंदु है :<br><br>
+								- क्रोम अथवा फायरफॉक्स के वर्तमान संस्करण का उपयोग करें<br>
+								- अपने ब्राउज़र सेटिंग्स की जाँच कर सुनिश्चित करें कि JavaScript और कुकीज़ दोनों सक्षम हो<br>
+								- अपने ब्राउज़र की कैश (cache) साफ़ करें।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-4" name="accordion-1" type="checkbox" />
+								<label for="ac-4">एक पाठ्यक्रम लेने का शुल्क कितना होता है? (यह  निःशुल्क है!)</label>
+								<article class="ac-small">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के पाठ्यक्रम परीक्षण हेतु सभी के लिए नि:शुल्‍क है। ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} द्वारा पाठ्यक्रम पूर्ण कर लेने पर उन्‍हें आवश्यकता अनुसार एक नि:शुल्‍क सम्मानित कोड प्रमाण-पत्र प्रदान किया जाता है।</p>
+								</article>
+								</div>
+
+
+								<div>
+								<input id="ac-5" name="accordion-1" type="checkbox" />
+								<label for="ac-5">क्‍या अयोग्य  के साथ शिक्षार्थियों के लिए पाठ्यक्रम उपलब्ध है?</label>
+								<article class="ac-medium">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} एक प्रगतिशील ऑनलाइन शिक्षा का प्‍लेटफार्म निर्माण करने का प्रयास कर रहा है जो अयोग्य  शिक्षार्थियों सहित प्रत्येक के लिए सुगम्‍यता को प्रोत्‍साहित करता है। हम प्‍लेटफार्म की सुगम्‍यता को बेहतर करने हेतु समर्पित हैं, एवं हमारे कार्यालय के पते पर आपकी टिप्पणीयों अथवा प्रश्‍नों का स्वागत है।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-6" name="accordion-1" type="checkbox" />
+								<label for="ac-6">क्‍या पाठ्यक्रम मात्र अंग्रेजी में उपलब्‍ध है ?</label>
+								<article class="ac-medium">
+								<p>वर्तमान में ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के सारे पाठ्यक्रम हिन्दी और अंग्रेजी दोनों भाषाओं में उपलब्ध हैं, बाद में अन्य भारतीय क्षेत्रीय भाषाओं में इन पाठ्यक्रमों का आरंभ होगा।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-7" name="accordion-1" type="checkbox" />
+								<label for="ac-7">मैं ऐसी जगह रहता हूँ जहाँ यूट्यूब उपलब्‍ध नहीं है। मैं वीडियो कैसे देख सकता हूँ?</label>
+								<article class="ac-medium">
+								<p>जिन स्थानों पर यूट्यूब प्रतिबंधित है, वहाँ ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} का वीडियो निरंतरता से उपलब्ध नहीं हो सकता है। इन परिस्थितियों में, वीडियो खंड प्राय: डाउनलोड करने हेतु उपलब्ध हैं। प्रत्येक वीडियो खंड देखने हेतु फाइल को डाउनलोड करने के लिए नीचे दी गयी लिंक "यहाँ से डाउनलोड करें" पर क्लिक करें।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-8" name="accordion-1" type="checkbox" />
+								<label for="ac-8">क्‍या मैं ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} पाठ्यक्रम अपने स्मार्ट फोन अथवा टैबलेट कम्‍प्‍यूटर पर अभिगमन कर सकता हूँ?</label>
+								<article class="ac-small">
+								<p>इस समय, ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} पूर्णत: मोबाइल उपकरणों के साथ अभिगमन का समर्थन नहीं करता है। जिसमें आपके पाठ्यक्रम के कई संघटक कार्य करेंगे एवं कई नहीं।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-9" name="accordion-1" type="checkbox" />
+								<label for="ac-9">क्‍या पाठ्यक्रम के नमूने को चुनने हेतु कोई सुविधा है?</label>
+								<article class="ac-small">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} आपको एक मनोरंजक डेमो पाठ्यक्रम प्रदान करता है, जिसके द्वारा आप यह जान सकते हैं, कि पाठ्यक्रम कैसे देखा जायेगा।<a href="#" target="_blank" class="links-active">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के  डेमो पाठ्यक्रम</a> के लिए पंजीकृत करें एवं अवलोकन करें!</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-10" name="accordion-1" type="checkbox" />
+								<label for="ac-10">मैने अभी तक डेमो पाठ्यक्रम पूर्ण नहीं किया है, क्‍या मैं अपने अन्‍य पाठ्यक्रमों का आरंभ कर सकता हूँ?</label>
+								<article class="ac-small">
+								<p>जी हाँ!  डेमो पाठ्यक्रम निर्मित किया गया है। आपको संक्षिप्त विवरण देने के लिए कि कैसे ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}पाठ्यक्रम कार्य करता है। इसको समाप्त करना अनिवार्य नहीं है</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-11" name="accordion-1" type="checkbox" />
+								<label for="ac-11">क्या होगा अगर मुझे पाठ्यक्रम को छोड़ना पड़े? क्‍या भविष्‍य में मैं समान अथवा अन्‍य पाठ्यक्रम लेने के लिए सक्षम रहूँगा?</label>
+								<article class="ac-small">
+								<p>आप ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के पाठ्यक्रम से किसी भी समय अपंजीकृत कर सकते हैं। ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के अपूर्ण अध्ययन से सम्‍बंधित बिल्‍कुल कोई शैक्षिक दंड नहीं है। आप इस पाठ्यक्रम को बाद में फिर से पंजीकृत (बशर्ते कि हम अभी भी इसको प्रस्‍तावित कर रहे हैं) कर सकते हैं।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-12" name="accordion-1" type="checkbox" />
+								<label for="ac-12">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} उपाधि कोड क्‍या है?</label>
+								<article class="ac-small">
+								<p>आपको ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}&nbsp;<a href="${marketing_link('TOS')}" class="links-active" target="_blank">उपाधि कोड यहॉं </a>मिलेगा। प्रत्येक पाठ्यक्रम में शिक्षार्थी सहयोग और चर्चा हेतु  विशिष्ट सहमति हो सकती  है।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-13" name="accordion-1" type="checkbox" />
+								<label for="ac-13">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} को बेहतर बनाने मे मैं कैसे सहायता कर सकता हूँ?</label>
+								<article class="ac-large">
+
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} का प्‍लेटफार्म न केवल शिक्षित करने, अपितु शिक्षण के बारे में आंकड़े एकत्र करने हेतु विशेष रूप से रूपांकित किया गया है। ऑनलाइन एवं परिसर में शिक्षा के स्‍तर को कैसे सुधारा जाये, यह जानने के लिए ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} इस आंकड़ों का उपयोग करेगा। मात्र एक पाठ्यक्रम लेकर आप ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} की सहायता कर रहे हैं। धन्यवाद!<br>
+								यदि आपने ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के साथ अपने अनुभव का आनंद लिया है तो, हम आपको प्रोत्साहित करते हैं कि अपनी अंत:दृष्टि और उत्साह हमारे एवं अन्य (व्यक्ति में एवं ऑनलाइन) लोगों के साथ साझा करें। आप हमसे&nbsp;<a href="#" class="links-active">info@<font class="site_name">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}</font>.in</a>&nbsp;के माध्‍यम से अपने शिक्षार्थियों की कहानियाँ आदान प्रदान कर सकते हैं।</p>
+								</article>
+								</div>
+
+								<br><p><strong>पाठ्यक्रम</strong></p>
+
+								<div>
+								<input id="ac-14" name="accordion-1" type="checkbox" />
+								<label for="ac-14">मेरा पाठ्यक्रम कब आरंभ तथा/अथवा समाप्‍त होगा ?</label>
+								<article class="ac-medium">
+								<p>आप अपने पाठ्यक्रम विवरण पृष्‍ठ पर प्रत्येक पाठ्यक्रम हेतु आरंभ करने की तिथि एवं पाठ्यक्रम की अवधि ढूँढ़ सकते हैं। यदि आप एक पाठ्यक्रम के लिए पंजीकृत हैं, तो आप भी अपने डैशबोर्ड पर इसकी आरंभ की तिथि देख सकेंगे। एक पाठ्यक्रम के आरंभ की तिथि पर दिन भर में किसी भी समय पाठ्यक्रम शुरू हो सकता है। यदि आपको आपका पाठ्यक्रम वर्तमान में उपलब्‍ध नहीं है तो कृपया दिन में बाद में वापस जांच करें। पाठ्यक्रम का समय स्थिति के अनुरूप है। इस हेतु पाठ्यक्रम के आरंभ में लॉग-इन करना अनिवार्य नहीं है।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-15" name="accordion-1" type="checkbox" />
+								<label for="ac-15">एक ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} पाठ्यक्रम को लेने के लिए मैं लॉग इन कैसे करूँ?</label>
+								<article class="ac-medium">
+								<p>एक बार आपने पाठ्यक्रम हेतु साइन-अप कर अपना खाता सक्रिय करने के उपरांत, ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के मुख्य पृष्ठ पर लॉग-इन बटन मे क्लिक करें एवं ई-मेल का पता और पासवर्ड टाइप करें। यह आपको आपके डैशबोर्ड पर ले जायेगा, जहाँ आप अपने सभी आगमन के साथ सक्रिय पाठ्यक्रम कर सकेंगे। (पाठ्यक्रम के आरंभ होने के पूर्व, यह आपके डैशबोर्ड पर सूचीबद्ध हो जायेगा परंतु (इस समय)"पाठ्यक्रम अवलोकन" का विकल्‍प नहीं होगा।)</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-16" name="accordion-1" type="checkbox" />
+								<label for="ac-16">मेरे पाठ्यक्रम को उत्‍तीर्ण करने के लिए मुझे कितना कार्य करना होगा ?</label>
+								<article class="ac-small">
+								<p>प्रत्येक पाठ्यक्रम हेतु आवश्यक अध्ययन के अनुमानित समय आमतौर पर पाठ्यक्रम विवरण पृष्ठ पर शामिल किये गये हैं। यदि वह सूचीबद्ध नहीं हो, तो कृपया पाठ्यक्रम के पाठ्य विवरण अथवा पाठ्यक्रम चर्चा फोरम पर पाठ्यक्रम के आरंभ होने पर जांच लें। ।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-17" name="accordion-1" type="checkbox" />
+								<label for="ac-17">मुझे एक पाठ्यक्रम (पूर्वापेक्षा) चयन करने के पूर्व क्‍या करना होगा?</label>
+								<article class="ac-small">
+								<p>प्रत्‍येक पाठ्यक्रम भिन्‍न हैं जिनमे से कुछ पाठ्यक्रम की पूर्वापेक्षायें हैं, कुछ में है कुछ में नहीं अत: कृपया अपने पाठ्यक्रम के विवरण पृष्‍ठ पर पाठ्यक्रम की पूर्वापेक्षाओं का अवलोकन करें, कि आपके विशिष्‍ट पाठ्यक्रम हेतु क्‍या अनुशंसित है। यदि आपको इस प्रकार की कोई पूर्वापेक्षा प्राप्‍त नहीं होती है, तब भी आप पाठ्यक्रम का चयन कर सकते हैं।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-18" name="accordion-1" type="checkbox" />
+								<label for="ac-18">मुझे कौन-सी पुस्‍तकें पढ़नी चाहिए? (कक्षा आरंभ होने से पहले मुझे पठन सामग्री में रूचि है।)</label>
+								<article class="ac-medium">
+								<p>सभी आवश्‍यक शैक्षिक सामग्री पाठ्यक्रम के दौरान, आपके ब्राउजर में प्रदाय किये जायेंगे। कुछ पाठ्यक्रम अपने पाठ्य विवरण पृष्‍ठ पर अतिरिक्‍त संसाधनों को भी सूची बद्ध कर सकते हैं। पाठ्यक्रम के दौरन पूरक पाठ्य सामग्री हेतु, अपने सहपाठियों अथवा पाठ्यक्रम शिक्षक से सुझाव हेतु पाठ्यक्रम चर्चा के मंच पर प्रश्‍न पोस्‍ट करें।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-19" name="accordion-1" type="checkbox" />
+								<label for="ac-19">क्‍या मैं अपने पाठ्यक्रम के लिए पुस्‍तक डाउनलोड कर सकता हूँ?</label>
+								<article class="ac-small">
+								<p>पाठ्यक्रम में विशिष्‍ट तौर पर लिखित रूप से निर्दिष्‍ट न होने की स्‍थति में, ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} की पाठ्यपुस्‍तक विषय-वस्‍तु, मात्र ब्राउजर में ही देखा जा सकता हैं; इन्‍हें डाउनलोड करना प्रकाशनाधिकृत विधि का उल्‍लंघन होगा। यदि आपको पाठ्यपुस्‍तक के मूल प्रति की आवश्‍यकता है, अथवा चाहते हैं तो आप एक प्रति खरीद पर विचार कर सकते हैं।</p>
+								</article>
+								</div>
+
+
+								<div>
+								<input id="ac-20" name="accordion-1" type="checkbox" />
+								<label for="ac-20">क्‍या मैं एक ही समय पर एकाधिक पाठ्यक्रम का चयन कर सकता हूँ?</label>
+								<article class="ac-small">
+								<p>जी हाँ! आप ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} में एकाधिक (कई) पाठ्यक्रम का चयन कर सकते हैं। हम आपके प्रत्‍येक पाठ्यक्रम विवरण पृष्ठ पर आवश्यकता अनुसार उपलब्ध अध्ययन समय के संतुलन की जाँच का अनुग्रह करते हैं।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-21" name="accordion-1" type="checkbox" />
+								<label for="ac-21">कक्षा का समय क्‍या है?</label>
+								<article class="ac-medium">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} पाठ्यक्रम आपकी सुविधानुसार किया जाता हैं। व्याख्यान और असाइनमेंट दिन में 24 घंटे उपलब्ध हैं,जिसका तात्पर्य है आपके पास जब भी समय उपलब्ध हो आप वीडियो देख सकते हैं और कार्य पूर्ण कर सकते हैं। सामान्यत: अपने पाठ्यक्रम पर लॉग-इन करें एवं पाठ्यक्रम विषय वस्तु के आधार पर कार्य करें। जब भी असाइनमेंट अथवा परीक्षा की तिथि नियत कर दी गई हो, तो इस हेतु आपको पर्याप्‍त समय प्रदान किया जाता है, जिससे आप अपने समस्त कार्य आसानी से अनुसूचित कर सकते हैं।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-22" name="accordion-1" type="checkbox" />
+								<label for="ac-22">यदि मुझसे एक सप्‍ताह छूट जाता है, तो इससे मेरे कार्य संपादन पर क्‍या असर होगा?</label>
+								<article class="ac-small">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के पाठ्यक्रम को उत्‍तीर्ण करना निश्चित रूप से संभव है, यदि आपका एक सप्‍ताह छूट गया है; हालांकि, पाठ्यक्रम के कार्य प्रगतिशील हैं, अत: आपके छूटे हुए पाठ्यक्रम के कार्य का आपको पुन: अवलोकन एवं अध्‍ययन करना चाहिये। इसके अलावा, असाइनमेंट और परीक्षा अपनी नियत (निश्चित) तिथि के पश्‍चात् प्रस्तुत नहीं की जा सकती है। अपने पाठ्यक्रम कि महत्‍वपूर्ण तिथि एवं समय हेतु पाठ्य विवरण की जांच करें।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-23" name="accordion-1" type="checkbox" />
+								<label for="ac-23">मुझसे एक नियत तिथि छूट गई; क्‍या मुझे अतिरिक्‍त समय प्राप्‍त हो सकता है?</label>
+								<article class="ac-small">
+								<p>हम व्यक्तिगत् अतिरिक्‍त समय पेशकश करने में सक्षम नहीं हैं, पाठ्यक्रम की अनुसूची तय है एवं यहां एक शिक्षार्थी के लिए असाइनमेंट अथवा परीक्षा की तिथि में परिवर्तन का कोई विकल्‍प नहीं है। पाठ्यक्रम के गृहकार्य अथवा प्रयोगशाला अभ्‍यास के अंतिम ग्रेड से दो सप्‍ताह पूर्व तक अधिकांश पाठ्यक्रम शिक्षार्थियों को गृहकार्य और प्रयोगशाला के अंतिम ग्रेड से पाठ्यक्रम छोड़ने की अनुमति देते हैं। अधिक जानकारी हेतु आपके पाठ्यक्रम के श्रेणीकरण नीतियों का अवलोकन करें।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-24" name="accordion-1" type="checkbox" />
+								<label for="ac-24">मेरे पाठ्यक्रम की समय-सीमा यूटीसी में है, यह क्‍या है?</label>
+								<article class="ac-small">
+								<p>यूटीसी, समन्वित विश्वसंबंधी समय को प्रदर्शित करता है। यूटीसी में वर्तमान समय ज्ञात करें एवं उसे अपने स्‍थानीय समय में परिवर्तित करें, विश्‍व सर्वर समय अथवा अन्‍य इंटरनेट समय सेवाओं की जांच करें।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-25" name="accordion-1" type="checkbox" />
+								<label for="ac-25">क्‍या होगा यदि मेरे पास पाठ्यक्रम के श्रेणीकरण सम्‍बंधित कुछ प्रश्‍न है?</label>
+								<article class="ac-medium">
+								<p>आपके पाठ्यक्रम चर्चा फोरम में श्रेणीकरण एवं पाठ्यक्रम विषय वस्तु से सम्‍बंधित सभी प्रश्‍नों को स्पष्ट रूप से बहुत अच्‍छी व्‍याख्‍या की गई है। वहाँ आपके प्रश्‍नों को पाठ्यक्रम शिक्षक सीधे पढ़ सकते हैं एवं उत्‍तरित कर सकते हैं।<br>नोट : अधिकांश ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के पाठ्यक्रम, अपनी श्रेणीकरण नीति को पाठ्यक्रम पाठ्य विवरण में पोस्‍ट करते हैं। एक बार आपकी कक्षा आरंभ होने के उपरांत पाठ्य विवरण एवं चर्चा फोरम दोनो आपको उपलब्‍ध होंगे।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-26" name="accordion-1" type="checkbox" />
+								<label for="ac-26">मैं अन्‍य शिक्षार्थियों को कैसे मिल/खोज सकता हूँ?</label>
+								<article class="ac-small">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के सभी पाठ्यक्रम के पास चर्चा फोरम है जहां आप अन्‍य शिक्षार्थियों के साथ उपाधि कोड की रूपरेखा में बात कर सकते हैं एवं सहायता कर सकते हैं।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-27" name="accordion-1" type="checkbox" />
+								<label for="ac-27">मैं प्राध्‍यापक, सहायक शिक्षक एवं सहायक कर्मचारियों से कैसे बात कर सकता हूँ?</label>
+								<article class="ac-small">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के शिक्षण समूह तक पहुँचने हेतु आपकी कक्षा के लिए चर्चा फोरम सबसे अच्छा स्थान है; अपना प्रश्न तत्काल पोस्ट करें। हम समय से प्रतिक्रिया करने की सम्भवतः कोशिश करेंगे।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-28" name="accordion-1" type="checkbox" />
+								<label for="ac-28">मैं अपने पाठ्यक्रम के बारे में सहायता एवं सहयोग कैसे प्राप्‍त कर सकता हूँ?</label>
+								<article class="ac-medium">
+								<p>आपके पास सहपाठियों का एक विश्व समुदाय है। आप प्रश्नों को संलग्न (उपाधि कोड की रूपरेखा में) कर सकते हैं। साथ-साथ उन सहायक शिक्षकों से समर्थन प्राप्त कर सकते हैं, जो आपके पाठ्यक्रम कि देखरेख करता है। हमारे पाठ्यक्रमों के चर्चा फोरम पर देखें जहाँ आपके सहपाठियों के प्रश्न, उत्तर एवं टिप्पणियों कि समीक्षा) होती हैं, साथ ही आप अपने प्रश्न पोस्ट कर सकते हैं।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-29" name="accordion-1" type="checkbox" />
+								<label for="ac-29">क्‍या मैं एक ही पाठ्यक्रम का पुन: चयन कर सकता हूँ?  </label>
+								<article class="ac-small">
+								<p>जी हाँ! आप बारंबार अपनी इच्‍छानुसार ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के पाठ्यक्रम को पुन: चयन कर सकते हैं, एवं आपको प्रत्‍येक बार पृथक-पृथक प्रमाण-पत्र प्राप्‍त करने का अवसर होगा। एक पाठ्यक्रम के प्रत्‍येक प्रस्‍तावों का मूल्‍यांकन स्‍वतंत्र रूप से किया जाता है।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-30" name="accordion-1" type="checkbox" />
+								<label for="ac-30">क्‍या एक ही पाठ्यक्रम भविष्‍य में पुन: प्रस्‍तावित किया जा सकता है?</label>
+								<article class="ac-small">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के अधिकांश पाठ्यक्रमों को पुन: प्रस्‍तावित किये जायेंगे एवं अधिकांश पाठ्यक्रमों को नियमित रूप से जोड़ा जा सकता है। यदि आप ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के साथ पंजीकृत है, तो आप ई-मेल पर नये एवं पुन: प्रस्‍तावित पाठ्यक्रमों से (अवगत हो सकते हैं) सम्‍बंधित संदेश प्राप्‍त कर सकते हैं।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-31" name="accordion-1" type="checkbox" />
+								<label for="ac-31">एक पाठ्यक्रम जिसमें मैं रूचि रखता हूँ पूर्व में आरंभ हो चुका है। क्‍या मैं अभी भी नामांकन कर सकता हूँ?</label>
+								<article class="ac-small">
+								<p>जी हाँ, लेकिन आप पिछले किसी भी असाइनमेंट अथवा परीक्षा, हेतु सक्षम नहीं होंगे। यदि यह पाठ्यक्रम का आरंभ है, तो आप एक प्रमाण-पत्र प्राप्‍त करने हेतु अभी भी पर्याप्‍त असाइनमेंट एवं परीक्षाओं को पूरा करने में सक्षम हैं। अधिक जानकारी हेतु पाठ्यक्रम की पाठ्य विवरण एवं श्रेणीकरण नीति का अवलोकन करें।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-32" name="accordion-1" type="checkbox" />
+								<label for="ac-32">संग्रहित (लेखागार)/ अतीत पाठ्यक्रम क्‍या है?</label>
+								<article class="ac-small">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के कई पूर्व पाठ्यक्रम (संग्रहित) अभिलेखागार के रूप में उपलब्ध हैं। इन पाठ्यक्रमों हेतु मात्र लिखित परीक्षा पाना संभव है एवं कुछ विशेषताएँ, चर्चा फोरम के रूप में उपलब्ध नहीं हो सकती है। संग्रहित पाठ्यक्रमों हेतु प्रमाण-पत्र उपलब्ध नहीं हैं।</p>
+								</article>
+								</div>
+
+								<br><p><strong>प्रमाण-पत्र एवं श्रेणी</strong></p>
+
+								<div>
+								<input id="ac-33" name="accordion-1" type="checkbox" />
+								<label for="ac-33">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} किस प्रकार के प्रमाण-पत्र प्रस्‍तावित करता है?</label>
+								<article class="ac-small">
+								<p>पाठयक्रम पूर्ण होने के बाद  ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} केवल उपाधि कोड प्रमाण पत्र प्रदान करता है. लेखा परीक्षण  प्रमाण पत्र भी पाठयक्रम  में भाग लेने के लिए  दिए जाते है</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-34" name="accordion-1" type="checkbox" />
+								<label for="ac-34">मैं एक पाठ्यक्रम का परीक्षण कैसे कर सकता हूँ?</label>
+								<article class="ac-medium">
+								<p>हमारी वेबसाइट में पाठ्यक्रम हेतु पंजीकृत करें एवं आप सभी पाठ्यक्रमों का परीक्षण नि:शुल्क कर सकते हैं। इस हेतु आपके पास वीडियो, व्याख्यान, अध्ययन इत्यादि, के अभिगमन की अनुमति होगी एवं आप अधिकाधिक एवं कम से कम के रूप में, अपनी स्वेच्छा से भाग ले सकते हैं। ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के पाठ्यक्रमों में पंजीकृत हेतु एवं असाइनमेंट अथवा परीक्षा के पूर्ण न होने की स्थिति में किसी भी प्रकार के अर्थदंड का नियम नहीं है।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-35" name="accordion-1" type="checkbox" />
+								<label for="ac-35">उपलब्धि का उपाधी कोड प्रमाण-पत्र क्‍या है?</label>
+								<article class="ac-small">
+								<p>उपलब्धि का उपाधि कोड प्रमाण-पत्र यह प्रमाणित करता है कि आपके द्वारा एक पाठ्यक्रम सफलता पूर्वक पूर्ण किया गया है, परंतु आपके द्वारा अपना परिचय प्रमाणित नहीं किया गया है। वर्तमान में उपाधि कोड प्रमाण-पत्र पूर्णत: नि:शुल्‍क है।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-36" name="accordion-1" type="checkbox" />
+								<label for="ac-36">मेरे प्रमाण पत्र में  ग्रेड और / अथवा   घंटो की संख्या का श्रेय शामिल  होगा ?</label>
+								<article class="ac-small">
+								<p>वर्तमान में नहीं है  लेकिन  भविष्य में हम  शामिल करने पर  विचार कर सकते है।</p>
+								</article>
+								</div>
+
+
+								<div>
+								<input id="ac-37" name="accordion-1" type="checkbox" />
+								<label for="ac-37">क्या होगा यदि, कुछ (जैसे बिमारी या कम्प्यूटर सम्बंधित  समस्या) मुझे मेरे पाठ्यक्रम मे उत्तीर्ण हो ने से रोकेगा?</label>
+								<article class="ac-small">
+								<p>प्रयास, प्रयास एवं पुन: प्रयास करें, जब तक पाठ्यक्रम ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} में उपलब्ध है।</p>
+								</article>
+								</div>
+
+
+								<div>
+								<input id="ac-38" name="accordion-1" type="checkbox" />
+								<label for="ac-38">क्‍या मैं अपने प्रमाण-पत्र की हार्डकॉपी प्राप्‍त कर सकता हूँ?</label>
+								<article class="ac-small">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} प्रमाण-पत्र की एकैक (व्यक्तिगत)प्रति का प्रिंट नहीं भेजता है। यदि आप चाहें तो अपनी पीडीएफ प्रति का  प्रिंट प्राप्‍त कर सकते हैं।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-39" name="accordion-1" type="checkbox" />
+								<label for="ac-39">क्‍या मेरे विश्‍वविद्यालय द्वारा ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} पाठ्यक्रमों के क्रेडिट स्‍वीकार्य होंगे?</label>
+								<article class="ac-small">
+								<p>उपाधि कोड प्रमाण पत्र आपके स्वयं के हित के लिए है। यह प्रमाणपत्र शैक्षणिक संस्थानों या विश्वविद्यालयों द्वारा क्रेडिट मान्यता के लिए नहीं है।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-40" name="accordion-1" type="checkbox" />
+								<label for="ac-40">प्रमाण पत्र कैसे निर्धारित होते हैं?</label>
+								<article class="ac-medium">
+								<p>एक शिक्षार्थी जो एक पाठ्यक्रम में उत्तीर्ण श्रेणी प्राप्त करता है,  वह  CDEEP एवं ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के विवेक पर उन पाठ्यक्रमों से सम्बंधित प्रमाण-पत्र प्राप्त करेगा ।बशर्ते वे पाठयक्रम में परिभाषित पाठयक्रम के सभी आवश्यक किवज्ज् कार्य परीक्षाए समय सीमा के भीतर पूर्ण करते है ।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-41" name="accordion-1" type="checkbox" />
+								<label for="ac-41">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} का प्रमाण-पत्र कैसे प्रदान किया जाता है?</label>
+								<article class="ac-small">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के प्रमाण-पत्र हमारी वेबसाइट के माध्यम से ऑनलाइन वितरित किये जाते हैं। एक बार पाठ्यक्रम की श्रेणीकरण पूर्ण होने के उपरांत आपके द्वारा प्रमाण-पत्र अर्जित किया जा सकता है, यदि आपके द्वारा एक प्रमाण-पत्र अर्जित किया जाता है तो यह आपको आपके डैशबोर्ड में डाउनलोड करने हेतु उपलब्ध होगा।</p>
+
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-42" name="accordion-1" type="checkbox" />
+								<label for="ac-42">मुझे मेरा प्रमाण-पत्र क्यों प्राप्त नहीं हुआ?</label>
+								<article class="ac-small">
+								<p>पाठ्यक्रम के समाप्ति तिथि से दो सप्‍ताह के भीतर आपका प्रमाण-पत्र आपको प्रदान कर दिया जाता है। यदि आपको इस समय सीमा के भीतर प्रमाण-पत्र नही प्राप्‍त हो, एवं आपके द्वारा समस्‍त आवश्‍यकताओं की पूर्ती कर दी गई हो, तो कृपया अपने डैशबोर्ड की जांच करें, आपका प्रमाण-पत्र आपके पाठ्यक्रम के साथ प्रदर्शित होगा।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-43" name="accordion-1" type="checkbox" />
+								<label for="ac-43">मेरे द्वारा मेरा ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} का प्रमाण-पत्र खो दिया गया है, क्‍या आप मुझे यह पुन: भेज सकते हैं?</label>
+								<article class="ac-small">
+								<p>कृपया अपने खाते एवं डैशबोर्ड में लॉग-इन करें। वहां पर आप अपना प्रमाण-पत्र डाउनलोड करने एवं देखने में सक्षम होंगे।</p>
+								</article>
+								</div>
+
+								<br><p><strong>अन्‍य सहायता एवं खाता सम्‍बंधित प्रश्‍न</strong></p>
+
+								<div>
+								<input id="ac-44" name="accordion-1" type="checkbox" />
+								<label for="ac-44">क्‍या होगा यदि मेरा उपयोगकर्ता नाम पूर्व से ही मौजूद है?</label>
+								<article class="ac-small">
+								<p>कृपया एक भिन्‍न नाम के साथ पुन: प्रयास करें- उदाहरण के तौर पर अपने उपयोगकर्ता नाम के अंत में एक (रेन्डम) क्रमरहित संख्या जोड़ें।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-45" name="accordion-1" type="checkbox" />
+								<label for="ac-45">क्‍या होगा यदि मुझे लॉग-इन करने में समस्‍या का सामना करना पड़ रहा हो (पासवर्ड/ई-मेल अस्‍वीकार्य)?</label>
+								<article class="ac-small">
+								<p>कृपया यह सुनिश्‍चित करें की आपके पास फायरफॉक्‍स, क्रोम अथवा इन्‍टरनेट एक्‍सप्‍लोरर, कुकीज(cookies) एवं जावास्क्रीप्ट(JavaScript) के साथ वर्तमान संस्‍करण उपलब्‍ध है। इसके अलावा, अपने ब्राउज़र का कैश (cache) साफ़ करने का प्रयास करें।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-46" name="accordion-1" type="checkbox" />
+								<label for="ac-46">क्‍या होगा यदि मैं अपना पासवर्ड भूल गया?</label>
+								<article class="ac-small">
+								<p>“पासवर्ड भूल गये हैं?” यह लिंक आपको लॉग-इन में पासवर्ड फील्‍ड के नीचे दर्शित होगा। इस लिंक पर क्लिक करें एवं अपने ई-मेल का पता दर्ज करें। हम उस पते पर एक ई-मेल संदेश भेजेंगें, जो आपको आपका पासवर्ड पुन: जोड़ने में सहायक होगा।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-47" name="accordion-1" type="checkbox" />
+								<label for="ac-47">क्‍या होगा यदि मुझे सक्रियण ई-मेल अथवा पुन: स्‍थापित पासवर्ड अप्राप्‍त हो?</label>
+								<article class="ac-elarge">
+								<p>यदि आपको एक स्‍वचलित ई-मेल प्राप्‍त नहीं हो, तो इसके निम्‍न कारण हो सकते हैं :<br><br>
+								- आपके ई-मेल के पते में टाईपिंग त्रुटि हो।<br>
+								- आपके स्‍पैम फिल्‍टर द्वारा ई-मेल को पकड लिया गया हो, अत: कृपया अपने स्‍पैम फोल्‍डर की जांच करें।<br>
+								- संभवत: आपके द्वारा ब्राउजर का पुराना संस्‍करण उपयोग किया जा रहा हो, अत: हम आपको फायरफॉक्‍स अथवा क्रोम ब्राउजर के वर्तमान संस्‍करण को डाउनलोड करने का अनुग्रह करते हैं।<br>
+								- संभवत: आपके ब्राउजर की जावास्क्रीप्ट अक्षम है कृपया अपने ब्राउजर के सेटिंग की जांच कर सुनिश्चित करें की जावास्क्रीप्ट सक्षम हो।<br>
+								- आपके द्वारा हमारी ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} वेबसाइट पर सफलता पूर्वक पंजीकृत नहीं किया गया हो। कृपया पहले से ही अस्तित्व में ई-मेल के पते के आधार पर पुन: पंजीकृत करने का प्रयास करें। (यदि आपका ई-मेल का पता पूर्व से ही अस्‍तित्‍व में है तो आपको एक त्रुटि प्रदर्शित होगी, प्रतिरूपित ई-मेल पूर्व से ही मौजूद है।)<br><br>
+								यदि आप अपने खाते के सक्रीयन से अभी भी जूझ रहे हैं, तो हम आपसे नया खाता खोलने की अनसंशा करते हैं। आपको आपके पुराने खाते के साथ कुछ भी करने की आवश्‍यकता नहीं है। यदि यह मेल पर प्राप्‍त लिंक द्वारा सक्रीय नहीं किया गया हो तो यह स्‍वत: ही कुछ समय पश्‍चात विलुप्त हो जायेगी।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-48" name="accordion-1" type="checkbox" />
+								<label for="ac-48">क्‍या मैं अपना खाता अपमार्जित (विलोप)कर सकता हूँ?</label>
+								<article class="ac-small">
+								<p>आपको अपना खाता विलोप करने की कोई आवश्‍यकता नहीं है। क्‍यों कि एक पुराना अनुपयोगी ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} का खाता जो कि किसी भी पाठ्यक्रम से सम्‍बद्ध न हो वह स्‍वत: ही विलुप्‍त हो जायेगा।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-49" name="accordion-1" type="checkbox" />
+								<label for="ac-49">क्‍या होगा यदि मुझे प्रदर्शित करने में समस्‍या हो रही है (उदाहरणत: , प्रदर्शित पाठ्यक्रम में पूर्ण टूल्‍स उपलब्‍ध नहीं हैं, अथवा मैं वीडियो देखनें में असमर्थ हूँ)?</label>
+								<article class="ac-small">
+								<p>कृपया अपने ब्राउजर सेटिंग की जांच कर यह सुनिश्चित करें की जावास्क्रीप्ट सक्षम हो। हम आपको फायरफॉक्‍स अथवा क्रोम अथवा इन्‍टरनेट एक्‍सप्‍लोरर वर्तमान संस्‍करण 9 से अधिक को डाउनलोड करके उपयोग करने का अनुग्रह करते हैं।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-50" name="accordion-1" type="checkbox" />
+								<label for="ac-50">क्‍या होगा यदि मेरा प्रश्‍न यहाँ अनुत्‍तरित हो?</label>
+								<article class="ac-small">
+								<p>कृपया हमसे <a href="${marketing_link('CONTACT')}" class="links-active" target="_blank">संपर्क करें!</a>&nbsp;हम हर संभव हमारी उत्तम सहायता हेतु प्रस्तुत हैं।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-51" name="accordion-1" type="checkbox" />
+								<label for="ac-51">क्या अन्य संस्थानों/विश्वविद्यालयों के पाठ्यक्रम होंगे?</label>
+								<article class="ac-large">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} मुख्य रूप  IIT बॉम्बे से पाठ्यक्रम और शिक्षण प्रशिक्षण वर्कशॉप IIT बॉम्बे और  IIT खड़गपुर की ओर से प्रदान करने का  विचार करते है पाठ्यक्रम अन्य संस्थानों से राष्ट्रीय प्लेटफॉर्म ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} पर शीघ्र ही प्रस्तुत करने की आशा कर रहा है। कुछ इस तरह के पाठ्क्रम ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के प्लेटफॉर्म पर प्रतिबद्धता के एक भाग के रूप में ICT (NMEICT) का उपयोग करके राष्ट्रीय शिक्षा मिशन में प्रदान किये जायेंगे। यह ध्यान दिया जा सकता है,कि पाठ्यक्रम विषय-वस्तु और इन पाठ्क्रमों को प्रस्तुत करने की जिम्मेदारी संस्थागत विश्यविद्यालयों की होगी। ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} किसी ऐसे पाठ्यक्रमों का संचालन करने के लिए जिम्मेदार नहीं होगा।</p>
+								</article>
+								</div>
+                
+								</section>
+								</div>
+							
+								</div>
+								</section>
+								</td>
+								</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</section>
+</body>
+</html>

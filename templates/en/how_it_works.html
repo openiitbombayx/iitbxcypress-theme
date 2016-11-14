@@ -1,0 +1,95 @@
+<%inherit file="../../main.html" />
+<%include file='../../modal/_modal-settings-language.html'/>
+<%! from microsite_configuration import microsite %>
+<%namespace name='static' file='../../static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<!--Updated by Bab-->
+
+<%block name="pagetitle">${_("How It Works")}</%block>
+
+<%block name="bodyclass">how_it_works</%block><!--IITBombayX-2015 Nitin Ayer, block is added to identify CSS in SCSS files-->
+
+<!--IITBombayX-29/12/2015, CSS for How It Works page is written in _how_it_works_en.scss inside themes folder by Nitin Ayer-->
+
+<!--Updated by Bab-->
+<html>
+<head>
+</head>
+
+<body>
+	<div class="outer_content">
+		<div class="main_content">
+			<div class="banner"><img src=${static.url('themes/'+settings.THEME_NAME+'/images/how-it-works/how-it-works_english.jpg')} width="960px"></div>
+				<div class="container">
+					<div class="newsline">${_('Study, have fun, uncover a new passion or learn skills that may just change your life.')}</div>
+						<div class="cmsdata">
+
+						<p class="banner_block_01" >
+						<strong>Real Classes</strong>
+						From<br>
+						Science<br>
+						to Art to<br>
+						Technology,<br>
+						${_('{platform_name} offers ').format(platform_name=settings.PLATFORM_NAME)}<br>
+						simply the best<br>
+						classes from the best professors.<br><br>Check out the new <a href="#" class="links-active" target="_blank">${_('{platform_name} Demo course').format(platform_name=settings.PLATFORM_NAME)}</a>.</p>
+
+						<p class="banner_block_02">
+						<strong>An amazing experience</strong>
+						From <br>our
+						think<br>tank to
+						your <br>screen
+						we help<br>you
+						learn through<br>cool tools, videos and<br>game-like labs.
+						</p>
+
+						<p class="banner_block_03">
+						<strong>ON YOUR SCHEDULE</strong>
+						Take<br>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}<br>
+						courses at<br>
+						your pace,<br> 
+						at home or<br>in a cafe.
+						Our virtual<br>'classroom' is open 24/7.
+						</p>
+
+						<p class="banner_block_04">
+						<strong>MEET NEW FRIENDS</strong>
+						Use the latest in<br>
+						peer-to-peer<br>
+						social learning<br>
+						tools and connect<br>
+						with smart and <br>
+						passionate people,<br>
+						just like you,<br>from around the world. 
+						</p>
+
+						<p class="learn_more_tagline">Learn more: take the new
+						   <a href="#" class="links-active" target="_blank">${_('{platform_name} Demo course').format(platform_name=settings.PLATFORM_NAME)}</a>
+						   . More questions?&nbsp;<a href="${marketing_link('FAQ')}" class="links-active" target="_blank">Read our FAQ</a>
+						</p>
+
+						<h2 class="learner_tagline">Become an ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} learner, it's easy...</h2>
+						<div class="outer_steps">
+						<div class="inner_steps">
+						<ul class="how-it-works-steps">
+						<li><strong>Find your new course</strong>Search the Courses Page and explore topics and professors. We are always adding more.</li>
+						<li><strong>Review and choose</strong>Read through the course prerequisites and time commitment, so you know what to expect.</li>
+						<li><strong>Become an <font class="platform_name_small_caps">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}</font><br>learner</strong>Just click "Register Now". Both ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} and the classes are free. (Yes, really!)</li>
+						<li><strong>Start studying and have fun</strong>Crack the virtual books, start studying and connect with others online - and have fun!</li>
+                                                <div class="clearer"></div><!--IITBombayX-2016 Do not remove this DIV tag-->
+						</ul>
+						</div>
+						</div>
+
+						<div class="submit">
+                                                   <input type="submit" value="Find a Course and Start Learning Now" onClick="location.href='/all_courses/all'"></input>
+
+        					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

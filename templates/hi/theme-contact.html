@@ -1,0 +1,90 @@
+<%inherit file="../../main.html" />
+<%! from microsite_configuration import microsite %>
+<%namespace name='static' file='../../static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+<!--Bharat Moocs Added on 23 Sep for language option -->
+<%include file='../../modal/_modal-settings-language.html'/>
+
+<%block name="pagetitle">${_("Contact Us")}</%block>
+<%block name="bodyclass">contact_us_hi</%block><!--IITBombayX-2016 Nitin Ayer, block is added to identify CSS in SCSS files-->
+<!--IITBombayX-2016, CSS for this page is written in _contact_us_page.scss inside theme folder by Nitin Ayer-->
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+</head>
+<body>
+<section class="container about">
+	<div class="main_content">
+		<div class="banner"><img src=${static.url('themes/'+settings.THEME_NAME+'/images/contact.png')} width="960px"></div>
+			<div class="wrapper">
+				<div class="wrapper-container">
+					<div class="wrapper-inner">
+						<div class="inner-class">
+							<div class="inner-content">
+								<table border="0" width="960px;" cellpadding="0" cellspacing="0">
+
+								<tr>
+
+								<td class ="table_column01" width="217px" valign="top">
+								<div class="sidebar">
+
+								<ul class="sidemenu">
+								<li><a class="links" href="${marketing_link('ABOUT')}">हमारे बारे में</a></li>
+								<li><a class="links" href="${marketing_link('RESEARCH')}">अनुसंधान एवं<br>शिक्षा-शास्‍त्र</a></li>
+								<li><a class="links" href="#">ब्‍लॅाग</a></li>
+								<li><a class="links" href="#">समाचार</a></li>
+								<li><a class="links" href="${marketing_link('FAQ')}">शिक्षार्थियों की प्रश्‍नोत्‍तरी</a></li>
+								<li><a class="links" href="${marketing_link('IITBOMBAYX_FAQ')}">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} की प्रश्‍नोत्‍तरी</a></li>
+								<li><a class="links" href="${marketing_link('MEMBER')}">Team</a></li>
+								<li><a class="links-active" href="#">संपर्क-सूत्र</a></li>
+								</ul>
+								</div>
+								</td>
+
+								<td class ="table_column02" width="743px" valign="top">
+								<section class="inner-section">
+
+								<h2 class="field-page-tagline view-mode-full">संपर्क-सूत्र</h2>
+								<div class="field-page-body view-mode-full">
+                
+								<p>नमस्‍कार!  क्‍या आप पूर्व से ही  ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के शिक्षार्थी हैं?क्‍या आपके पास किसी विशिष्‍ठ पाठ्यक्रम से सम्‍बंधित कोई प्रश्‍न, सुझाव अथवा समस्‍या है? कृपया अपने पाठ्यक्रम चर्चा के फोर्रम पर पोस्‍ट करें।</p>
+
+								<p>क्‍या आप वर्तमान में  ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} के शिक्षार्थी नहीं है एवं आपके पास कुछ सामान्‍य प्रश्‍न है?</p>
+
+								<p>कृपया हमारी <a href="${marketing_link('FAQ')}" class="links-active" target="_blank">प्रश्‍नोत्‍तरी</a> देखें।</p>
+
+								<p>अभी भी सहायता की आवश्‍यकता है अथवा हमें सामान्‍य फीडबैक देना चाहते है, तो संपर्क करें।</p>
+                            
+								<p><strong>ई-मेल के पते:</strong></p>
+
+								<p><strong>प्रशासनिक सहायता हेतु :&nbsp;</strong>
+								<a href="mailto:adminsupport@${('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.in" class="links">adminsupport@${('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.in</a>
+								</p>
+
+								<p><strong>तकनीकि सहायता हेतु :&nbsp;</strong>
+								<a href="mailto:techsupport@${('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.in" class="links">techsupport@${('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.in</a>
+								</p>
+
+								<p><strong>शिक्षार्थियों की सहायता हेतु :&nbsp;</strong><a href="mailto:info@${('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.in" class="links">info@${('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.in</a>
+								</p>
+
+								<p><strong>पाठ्यक्रम में सहायता हेतु :&nbsp;</strong>
+								<a href="mailto:coursesupport@${('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.in" class="links">coursesupport@${('{platform_name}').format(platform_name=settings.PLATFORM_NAME).lower()}.in</a>
+								</p>
+
+								</div>
+								</section>
+
+								</td>
+								</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</section>
+</body>
+</html>

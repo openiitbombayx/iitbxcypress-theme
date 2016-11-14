@@ -1,0 +1,83 @@
+<%inherit file="../../main.html" />
+<!--Bharat Mooc langauage option added -->
+<%include file='../../modal/_modal-settings-language.html'/>
+<%! from microsite_configuration import microsite %>
+<%namespace name='static' file='../../static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<%block name="pagetitle">${_("Research & Pedagogy")}</%block>
+<%block name="bodyclass">research_page_en</%block><!--IITBombayX-2016 Nitin Ayer, block is added to identify CSS in SCSS files-->
+<!--IITBombayX-2016, CSS for this page is written in _research_page.scss inside theme folder by Nitin Ayer-->
+
+<head>
+</head>
+<body>
+<section class="container about">
+	<div class="main_content">
+		<div class="banner"><img src=${static.url('themes/'+settings.THEME_NAME+'/images/about-us.png')} width="960px"></div>
+			<div class="wrapper">
+				<div class="wrapper-container">
+					<div class="wrapper-inner">
+						<div class="inner-class">
+							<div class="inner-content">
+								<table border="0" width="960px;" cellpadding="0" cellspacing="0">
+
+								<tr>
+
+								<td class ="table_column01" width="217px" valign="top">
+								<div class="sidebar">
+
+								<ul class="sidemenu">
+								<li><a class="links" href="${marketing_link('ABOUT')}">ABOUT</a></li>
+								<li><a class="links-active" href="${marketing_link('RESEARCH')}">RESEARCH & PEDAGOGY</a></li>
+								<li><a class="links" href="#" target="_blank">BLOG</a></li>
+								<li><a class="links" href="#" target="_blank">NEWS</a></li>
+								<li><a class="links" href="${marketing_link('FAQ')}">LEARNERS FAQ</a></li>
+								<li><a class="links" href="${marketing_link('IITBOMBAYX_FAQ')}">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} FAQ</a></li>
+								<!-- IITBombayX Cypress Dec 2015 -->
+								<li><a class="links" href="${marketing_link('MEMBER')}">Team</a></li>
+								<li><a class="links" href="${marketing_link('CONTACT')}">CONTACT US</a></li>
+								</ul>
+
+								</div>
+								</td>
+
+								<td class ="table_column02" width="743px">
+								<section class="inner-section">
+
+                        					<h2 class="field-page-tagline view-mode-full">Research & Pedagogy</h2>
+
+								<div class="field-page-body view-mode-full">
+			
+								<p>${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} is empowering research on pedagogy or learning about learning.</p>
+								<p>The online environment provides a powerful platform to conduct experiments, exploring how learners learn and how faculty can best teach, using a variety of novel tools and techniques.</p>
+								<p>Fundamental questions include:</p>
+                         					<!--<p><strong> Fundamental questions include:</strong></p>-->
+
+								<ul class="ul-class">
+								<li>What motivates learners to learn and persist?</li>
+								<li>What helps learners to retain knowledge?</li>
+								<li>What are the best ways to teach complex ideas?</li>
+								<li>How can we assess what learners have learned?</li>
+								<li>What is best taught in person vs. online?</li>
+								</ul>
+
+								<p>By carefully assessing course data, from mouse clicks to time spent on tasks, to evaluating how learners respond to various assessments, researchers hope to shed light on how learners access information and master materials, with the ultimate aim of improving course outcomes.</p>
+
+								<p>We are not only expanding access to knowledge, but also developing best practices to enhance the learner experience and improve teaching and learning both on campus and online.</p>
+
+								</div>
+								</section>
+								</td>
+
+								</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</section>
+</body>
+</html>

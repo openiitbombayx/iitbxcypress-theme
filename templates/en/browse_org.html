@@ -1,0 +1,102 @@
+<%inherit file="../../main.html"/>
+<!--Bharat Moocs Added on 23 Sep for language option -->
+<%include file='../../modal/_modal-settings-language.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.conf import settings
+  from edxmako.shortcuts import marketing_link
+  from courseware.models import Organization
+%>
+<%namespace name='static' file='../../static_content.html'/>
+<%! from microsite_configuration import microsite %>
+
+<!--Updated by Bab-->
+
+<%block name="pagetitle">${_("Partners")}</%block>
+<%block name="bodyclass">partners_page</%block><!--IITBombayX-2015 Nitin Ayer, block is added to identify CSS in SCSS files-->
+
+<!--IITBombayX-2015, CSS for this page is written in _partner_page.scss inside theme folder by Nitin Ayer-->
+
+<html>
+<head>
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="wrapper-inner">
+		<div class="container">
+			<div class="columns">
+				<div class="content-column">
+					<div class="content-inner">
+						<section class="main-content">
+							<div class="region">
+								<div class="block">
+									<article class="node node-page article clearfix">
+									<div class="node-content">
+
+									<h2 class="field-page-tagline">Partners</h2>
+
+									<div class="field-page-body">
+
+									<p>At ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}, we believe in offering the highest quality courses, and share our commitment to excellence in teaching and learning, both online and in the classroom.</p>
+
+									<ul class="item-list-third">
+
+									<li><p class="list-label">${courses}</p>
+									<p>Courses in many areas of study</p></li>
+
+									<li><p class="list-label">${staff}</p>
+									<p>Faculty and staff teaching courses and discussing topics online</p></li>
+
+									<li><p class="list-label">${generatedcertificate}</p>
+									<p>Total learners enrolled for completed courses</p></li>
+									</ul>
+                        				
+									</div>
+									</div>
+									</article>
+								</div>
+
+								<div class="block-views-members">
+									<div class="view">
+										<div class="view-header">
+
+										<!--<a name="charter-members"></a>-->
+										<!--<h2 class="members-header"><span>Partners</span></h2>
+										<p>Our partner Universities and Academic Institutes of the ${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} platform.</p>-->
+                                        					</div>
+				
+										<div class="view-content">
+
+										<ul class="member-list">
+			 							%for org1 in org:
+										<li class="views-row-odd views-row-first member member-tile member-founder ">
+
+                                            					<div class="member-logo">
+          				   					<a href="/organization/${org1.org_id}"  target="_blank">
+										<img typeof="foaf:Image" class="image-style-none" src=${static.url('themes/'+settings.THEME_NAME+org1.image_name)}  width="200px" height="101px" alt="${org1.org_name}" title="${org1.org_name}" /></a>
+										</div>
+
+										<div class="member-label">${org1.org_id}</div>
+
+										</li>
+										%endfor                                                   
+										</ul>
+										</div>
+										</div>
+									<div>
+								</div>
+
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

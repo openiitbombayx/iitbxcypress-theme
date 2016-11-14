@@ -1,0 +1,20 @@
+## mako
+<%! from django.core.urlresolvers import reverse %>
+<%namespace name='static' file='/static_content.html'/>
+<%inherit file="/navigation.html"/>
+<%! from microsite_configuration.templatetags.microsite import platform_name %>
+<!-- IITBombayX - using custom variable name for theme name instead of hard coding -->
+<!-- 06th Jan 2016 -->
+
+
+## TODO: this will eventually be moved to the Sass
+<%block name="navigation_logo">
+<%doc>
+<!-- IITBombayX - using custom variable name for theme name instead of hard coding -->
+<!-- 06th Jan 2016 -->
+  <!--img src="${static.url('themes/iitbxcypress-theme/images/iitbombayxlogo_header.png')}" height="50" alt="Home Page" /-->
+  <!--img src="${getimagename()}" height="50" alt="Home Page" /-->
+</%doc>
+  <img src=${static.url('themes/'+settings.THEME_NAME+'/images/headerlogo.png')} alt="Home Page" />
+</%block>
+

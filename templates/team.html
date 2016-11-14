@@ -1,0 +1,155 @@
+<%inherit file="main.html"/>
+<!-- Bharat MOOCs 19th Sept 2014 Added language selection box -->
+<%include file='modal/_modal-settings-language.html'/>                                    
+<%namespace name='static' file='static_content.html'/>          
+<%! from django.utils.translation import ugettext as _ %>       
+<%!                                                             
+  from django.core.urlresolvers import reverse          
+  from django.conf import settings
+  from edxmako.shortcuts import marketing_link  
+  from courseware.models import Organization
+%>                                              
+<%namespace name='static' file='static_content.html'/>  
+<%! from microsite_configuration import microsite %>            
+
+<%block name="pagetitle">${_("Team")}</%block>
+<%block name="bodyclass">team_page_en</%block><!--IITBombayX-2016 Nitin Ayer, block is added to identify CSS in SCSS files-->
+<!--IITBombayX-2016, CSS for this page is written in _team_page.scss inside theme folder by Nitin Ayer-->
+
+<html>
+<head>
+<script type='text/javascript' src='/static/js/jquery.dotdotdot-1.2.1.js'></script>
+
+<script type='text/javascript'>//<![CDATA[
+		$(window).load(function(){
+			$(function() {
+				$('#dot6 .view-content #pathname').each(function() {
+					var $dot5 = $(this);
+				    $dot5.append( ' <a class="toggle" href="#"><span class="open">[ + ]</span><span class="close">[ - ]</span></a>' );
+					function createDots()
+					{
+						$dot5.dotdotdot({
+							after: 'a.toggle'
+						});
+					}
+					function destroyDots() {
+						$dot5.trigger( 'destroy' );
+					}
+					createDots();
+
+					$dot5.on(
+						'click',
+						'a.toggle',
+						function() {
+							$dot5.toggleClass( 'opened' );
+						if ( $dot5.hasClass( 'opened' ) ) {
+								destroyDots();
+							} else {
+								createDots();
+							}
+							return false;
+						}
+					);				
+				});
+			}); 
+
+
+});//]]> 
+
+</script>
+</head>
+<body>
+
+<section class="container about">
+	<div class="main_content">
+		<div class="banner"><img src=${static.url('themes/'+settings.THEME_NAME+'/images/teambanner.jpg')}></div>
+			<div class="wrapper">
+				<div class="wrapper-container">
+					<div class="wrapper-inner">
+						<div class="inner-class">
+							<div class="inner-content">
+								<table border="0" width="960px;" cellpadding="0" cellspacing="0">
+
+								<tr>
+
+								<td class ="table_column01" width="217px" valign="top">
+								<div class="sidebar">
+
+								<ul class="sidemenu">
+								<li><a class="links" href="${marketing_link('ABOUT')}">${_('About')}</a></li>
+								<li><a class="links" href="${marketing_link('RESEARCH')}">${_('Research & Pedagogy')}</a></li>
+								<li><a class="links" href="#" target="_blank">${_('Blog')}</a></li>
+								<li><a class="links" href="#" target="_blank">${_('News')}</a></li>
+								<li><a class="links" href="${marketing_link('FAQ')}">${_('Learners FAQ')}</a></li>
+								<li><a class="links" href="${marketing_link('IITBOMBAYX_FAQ')}">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} FAQ</a></li>
+								<li><a class="links-active" href="${marketing_link('MEMBER')}">${_('Team')}</a></li>
+								<li><a class="links" href="${marketing_link('CONTACT')}">${_('Contact Us')}</a></li>
+								</ul>
+
+								</div>
+								</td>
+
+								<td class ="table_column02" width="743px">
+								<section class="inner-section">
+
+								<h2 class="field-page-tagline">${_('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} ${_('Team')}</h2>
+
+								<div class="field-page-body">
+									% if len(members) == 0:
+										<p>${_('There are no team members configured.')}</p>
+									% else:
+
+									<div class="content-container" id="dot6">
+										
+										% for member in members:
+										<div class="view-content">
+										<!--team member image-->
+
+											<div class="member-image">
+												<img class="image-info" src="${member.photo}"></img>
+											</div>
+				
+											<!--team member info-text starts-->
+											<div class="member-info">
+			
+												<!--team member name-->
+												<div class="team-member-name">
+													<h3>${member.name}</h3>
+												</div>
+	
+												<!-- team name -->
+												<div class="team-name">
+													<h4>${member.team_name}</h4>
+												</div>
+	
+												<!-- team member role -->
+												<div class="team-member-role">
+													<h4>${member.role}</h4>
+												</div>
+
+												<!-- team member bio-->
+												<div class="team-member-info">
+													<div class="box after" id="pathname">${member.biodata}</div>
+												</div>
+
+											</div>
+											<!-- team member info-text ends-->
+
+										</div>
+										% endfor	
+									</div>                            
+									%endif
+								</div>
+							</section>
+							</td>
+							</tr>
+							</table>
+         		     			 </div>
+         				</div>           	
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,161 @@
+//IITBombayX-2016, This file is created by Nitin Ayer, it contains CSS related to Course About page.
+
+.courses_about_page {
+ header.global nav {
+  max-width: 1170px;
+  width: 1170px;
+ }
+
+ header.global{
+   position: fixed;
+   top: 0px;
+   z-index: 50;
+ }
+
+ .wrapper-footer footer {
+   width: 1170px !important;
+   max-width: 1170px !important;
+   padding: 0px 15px 0px 15px;
+ }
+
+ .wrapper-footer footer .open-edx_logo, #footer-openedx .open-edx_logo {
+        padding-top: 1.8em !important;
+ }
+
+ .content-wrapper{
+   margin-top: 76px;
+   //padding-bottom: 0px;
+ }
+
+ .course-info {
+  max-width: 1170px;
+  margin: auto;
+  //background: $white;
+ }
+
+ .intro-inner-wrapper{
+  box-shadow: none !important;
+  background: $white !important;
+  border: none !important;
+  border-bottom: 1px solid $border-color-l3 !important;
+ }
+
+ .course-info .container{
+   padding: 0px 0px 0px 20px;
+   background: $white;
+   border: 1px solid $border-color-l3;
+   border-top: 0px;
+ }
+
+ .course-sidebar .course-summary{
+   border-left: 1px solid $border-color-l3;
+   border-bottom: 1px solid $border-color-l3;
+   border-right: 0px;
+ }
+
+ .course-info header.course-profile {
+   background: none;
+   box-shadow: none;
+   margin: 0px;
+   padding-top: 20px;
+   height: auto;
+   padding-bottom: 40px;
+   border-bottom: 1px solid $border-color-l3
+ }
+
+ .container nav{
+  border-bottom: none !important;
+  margin: 30px 0px 15px 0px !important;
+ }
+
+ .active {
+  font-size: 22px !important;
+  text-transform: none !important;
+  font-weight: bold !important;
+  padding: 0px !important;
+  border-bottom: none !important;
+ }
+
+ //.container nav a:first-child {
+    //font-size: 22px;
+   //text-transform: uppercase;
+ //}
+
+ .course-info header.course-profile .intro-inner-wrapper .intro > hgroup {
+  border-bottom: none;
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 0px;
+ }
+
+ .inner-wrapper, .inner-wrapper section, h1, h2, h3, p{
+   font-family: $font_family1;
+ }
+
+ .hindi_text{
+   font-family: $font_family2;
+ }
+
+ .inner-wrapper h2{
+  font-weight: bold;
+  text-transform: none;
+  font-size: 1.25em;
+ }
+
+ .teacher-image{
+   margin:0px 20px 0px 0px !important;
+   padding: 0px !important;
+   border: 0px !important;
+   box-shadow: (3px 2px 5px rgba(0, 0, 0, .5));
+ }
+
+//IITBombayX-2016,CSS for Registor button added by Nitin Ayer
+
+ .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:hover:not(:disabled){
+   background-image: none;
+   background-color: $link-color;
+ }
+
+ .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register{
+   background: $button-color none repeat scroll 0px 0px;
+   border: 0px none $white;
+   border-radius: 3px;
+   box-sizing: border-box;
+   font-weight: 600;
+   text-decoration: none;
+   text-shadow: none;
+   line-height: normal;
+ }
+
+ .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:focus:not(:disabled) {
+   box-shadow: none !important;
+ }
+
+ .course-info header.course-profile .intro-inner-wrapper .intro .main-cta a.register:active:not(:disabled) {
+   box-shadow: none !important;
+ }
+
+ .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:hover:not(:disabled){
+   background-image: none;
+   background-color: $link-color;
+   box-shadow: none !important;
+ }
+
+ .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong{
+   background: $button-color none repeat scroll 0px 0px;
+   border: 0px none $white;
+   border-radius: 3px;
+   box-sizing: border-box;
+   font-weight: 600;
+   text-decoration: none;
+   text-shadow: none;
+   line-height: normal;
+ }
+
+ .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:focus:not(:disabled) {
+   box-shadow: none !important;
+ }
+
+ .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong:active:not(:disabled) {
+   box-shadow: none !important;
+ }
+}

@@ -1,0 +1,765 @@
+//IITBombayX-2015, This file is created by Nitin Ayer, it contains CSS related to Partners page.
+//Engish Partner page CSS
+
+.partners_page {
+ header.global {
+  position: fixed;
+  top: 0px;
+ }
+
+  header.global nav {
+   width: 960px;
+ }
+ .wrapper-footer footer {
+   width: 960px !important;
+ }
+
+ .wrapper-footer footer .open-edx_logo, #footer-openedx .open-edx_logo {
+   padding-top: 40px !important;
+ }
+
+ .content-wrapper {
+   padding-bottom: 0px;
+   margin-top: 76px;
+ }
+
+ .wrapper{
+  /*background-color: #F7F7F7;*/
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  /*line-height: 24px;*/
+ }
+
+ .wrapper-inner{
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: auto;
+  padding: 0px 20px 0px 20px;
+  width: 960px;
+ }
+
+ .container{
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0px;
+ }
+
+ .columns {
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  overflow: hidden;
+ }
+
+ .content-column {
+  background-color: $white;
+  color: $gray-4;
+  font-family: $font_family1;
+  float:left;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 960px;
+  clear: none;
+ }
+
+ .content-inner {
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  min-height: 1px;
+  overflow: visible;
+  word-wrap: break-word;
+ }
+
+ .main-content {
+  color: $gray-4;
+  font-family: $font_family1;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 25px 18px 25px 18px;
+  word-wrap: break-word;
+ }
+
+ .region {
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+ }
+
+ .block {
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+ }
+
+ .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+ }
+
+ .node node-page article clearfix{
+  color: $gray-4;
+  font-family: $font_family1;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 0px;
+  word-wrap: break-word;
+ }
+
+ .node-content{
+  color: $gray-4;
+  font-family: $font_family1;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 0px;
+  word-wrap: break-word;
+ }
+
+ .field-page-tagline{
+  color: $m-gray-d4 ;
+  font-family: $font_family1;
+  border-bottom: 1px solid $border-color-l3 ;
+  margin: 0px 0px 16.8px;
+  padding: 0px 0px 10.8px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 34.8px;
+  word-wrap: break-word;  
+  text-transform: none;
+  letter-spacing: 0px;
+ }
+
+ .field-page-body{
+  color: $gray-4;
+  font-family: $font_family1;  
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+ }
+
+ .field-page-body p{
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0px 0px 16px;
+  word-wrap: break-word;
+ }
+
+ .item-list-third {
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0px;
+  overflow: auto;
+  padding: 0px;
+  word-wrap: break-word;
+ }
+ 
+ .item-list-third li {
+  float: left;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  list-style: none outside none;
+  margin: 0px 0px 1em;
+  min-width: 200px;
+  padding: 0px 4%;
+  text-align: center;
+  width: 25%;
+ }
+
+ .item-list-third li .list-label {
+  background-color: $gray-1;
+  color: $button-color;
+  font-size: 1.8em;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin: 0px 0px 0.5em;
+  padding: 0px 0.5em;
+ }
+
+ .item-list-third li p {
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 12.8px;
+  font-weight: 400;
+  line-height: 19.2px;
+  list-style: outside none none;
+  margin: 0px 0px 12.8px;
+  text-align: center;
+  word-wrap: break-word;
+ }
+
+ .block-views-members{
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+ }
+
+ .view {
+  margin-bottom: 25px;
+ }
+
+
+ .view-display-members .view-header {
+  text-align: center;
+ }
+
+ .members-header {
+  //background-image: url(/static/images/univ-inst/bg-line-2px.png);
+  background-position: center center;
+  background-repeat: repeat-x;
+  border: 0px none;
+  color: $button-color !important;
+  font-size: 1em !important;
+  font-weight: 700 !important;
+  line-height: 1.5em;
+  margin: 0px 0px 15px;
+  padding: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $font_family1;
+  letter-spacing: 0px;
+ }
+
+ .view-header p{
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin: 0px 0px 1em;
+  text-align:center;
+  font-family: $font_family1;
+ }
+
+ .members-header span {
+  background-color: $white;
+  padding: 0px 20px;
+  font-size: 1em; 
+  font-weight: 700;
+  color: $button-color;
+  font-family: $font_family1;
+  letter-spacing: 0px;
+ }
+
+ a {
+  color: $link-color;
+  text-decoration: none;
+ }
+
+ .view-content {
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+ }
+
+ .member-list{
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 15px -8px 0px;
+  overflow: auto;
+  padding: 0px;
+  word-wrap: break-word;
+ }
+
+ //.member-list .member-tile {
+  //margin: 8px;
+ //}
+
+ .member-founder {
+  border: 1px solid $courseware-button-border-color;
+  color: $button-color;
+ }
+
+ .member-tile {
+  background-color: $light-gray3;
+  color: $button-color;
+  margin: 8px;
+  padding: 0px;
+  float: left;
+  list-style: none outside none;
+  text-align: center;
+ }
+
+ .member-logo{
+  color: $button-color;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  list-style: outside none none;
+  text-align: center;
+  word-wrap: break-word;
+ }
+
+ .member-logo img{
+  color: $button-color;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  height: 101px;
+  line-height: 24px;
+  list-style: outside none none;
+  margin: 8px;
+  max-width: 216px;
+  text-align: center;
+  word-wrap: break-word;
+ }
+
+ .member-label{
+  background-color: $courseware-button-border-color;
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 12.8px;
+  font-weight: 700;
+  line-height: 24px;
+  list-style-image: none;
+  font-weight: 700;
+  font-size: 0.8em;
+  padding: 5px 0px;
+ }
+
+ .member-founder:hover .member-label {
+  background-color: $link-color;
+  //border: 0px none;
+  color:$white;
+ }
+
+ .member-tile:hover {
+  border: 1px solid $link-color;
+  background-color: $white;
+ }
+
+ .item-list-half {
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0px;
+  overflow: auto;
+  padding: 0px;
+  word-wrap: break-word;
+ }
+}
+
+//----------------------Hindi Partner page CSS--------------------------------//
+
+.partners_page_hi {
+ header.global {
+  position: fixed;
+  top: 0px;
+ }
+
+  header.global nav {
+   width: 960px;
+ }
+ .wrapper-footer footer {
+   width: 960px !important;
+ }
+
+ .wrapper-footer footer .open-edx_logo, #footer-openedx .open-edx_logo {
+   padding-top: 40px !important;
+ }
+
+ .content-wrapper {
+   padding-bottom: 0px;
+   margin-top: 76px;
+ }
+
+ .wrapper{
+  /*background-color: #F7F7F7;*/
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  /*line-height: 24px;*/
+ }
+
+ .wrapper-inner{
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: auto;
+  padding: 0px 20px 0px 20px;
+  width: 960px;
+ }
+
+ .container{
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0px;
+ }
+
+ .columns {
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  overflow: hidden;
+ }
+
+ .content-column {
+  background-color: $white;
+  color: $gray-4;
+  font-family: $font_family2;
+  float:left;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 960px;
+  clear: none;
+ }
+
+ .content-inner {
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  min-height: 1px;
+  overflow: visible;
+  word-wrap: break-word;
+ }
+
+ .main-content {
+  color: $gray-4;
+  font-family: $font_family2;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 25px 18px 25px 18px;
+  word-wrap: break-word;
+ }
+
+ .region {
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+ }
+
+ .block {
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+ }
+
+ .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+ }
+
+ .node node-page article clearfix{
+  color: $gray-4;
+  font-family: $font_family2;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 0px;
+  word-wrap: break-word;
+ }
+
+ .node-content{
+  color: $gray-4;
+  font-family: $font_family2;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 0px;
+  word-wrap: break-word;
+ }
+
+ .field-page-tagline{
+  color: $m-gray-d4 ;
+  font-family: $font_family2;
+  border-bottom: 1px solid $border-color-l3 ;
+  margin: 0px 0px 16.8px;
+  padding: 0px 0px 10.8px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 34.8px;
+  word-wrap: break-word;  
+  text-transform: none;
+  letter-spacing: 0px;
+ }
+
+ .field-page-body{
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+ }
+
+ .field-page-body p{
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0px 0px 16px;
+  word-wrap: break-word;
+ }
+
+ .item-list-third {
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0px;
+  overflow: auto;
+  padding: 0px;
+  word-wrap: break-word;
+ }
+
+ .item-list-third li {
+  float: left;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  list-style: none outside none;
+  margin: 0px 0px 1em;
+  min-width: 200px;
+  padding: 0px 4%;
+  text-align: center;
+  width: 25%;
+ }
+
+ .item-list-third li .list-label {
+  background-color: $gray-1;
+  color: $button-color;
+  font-size: 1.8em;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin: 0px 0px 0.5em;
+  padding: 0px 0.5em;
+ }
+
+ .item-list-third li p {
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 12.8px;
+  font-weight: 400;
+  line-height: 19.2px;
+  list-style: outside none none;
+  margin: 0px 0px 12.8px;
+  text-align: center;
+  word-wrap: break-word;
+ }
+
+ .block-views-members{
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+ }
+
+ .view {
+  margin-bottom: 25px;
+ }
+
+ .view-display-members .view-header {
+  text-align: center;
+ }
+
+ .members-header {
+  //background-image: url(/static/images/univ-inst/bg-line-2px.png);
+  background-position: center center;
+  background-repeat: repeat-x;
+  border: 0px none;
+  color: $button-color !important;
+  font-size: 1em !important;
+  font-weight: 700 !important;
+  line-height: 1.5em;
+  margin: 0px 0px 15px;
+  padding: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $font_family2;
+  letter-spacing: 0px;
+ }
+
+ .view-header p{
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin: 0px 0px 1em;
+  text-align:center;
+  font-family: $font_family2;
+ }
+
+ .members-header span {
+  background-color: $white;
+  padding: 0px 20px;
+  font-size: 1em; 
+  font-weight: 700;
+  color: $button-color;
+  font-family: $font_family2;
+  letter-spacing: 0px;
+ }
+
+ a {
+  color: $link-color;
+  text-decoration: none;
+ }
+
+ .view-content {
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+ }
+
+ .member-list{
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 15px -8px 0px;
+  overflow: auto;
+  padding: 0px;
+  word-wrap: break-word;
+ }
+
+//.member-list .member-tile {
+//margin: 8px;
+//}
+
+ .member-founder {
+  border: 1px solid $courseware-button-border-color;
+  color: $button-color;
+ }
+
+ .member-tile {
+  background-color: $light-gray3;
+  color: $button-color;
+  margin: 8px;
+  padding: 0px;
+  float: left;
+  list-style: none outside none;
+  text-align: center;
+ }
+
+ .member-logo{
+  color: $button-color;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  list-style: outside none none;
+  text-align: center;
+  word-wrap: break-word;
+ }
+
+ .member-logo img{
+  color: $button-color;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  height: 101px;
+  line-height: 24px;
+  list-style: outside none none;
+  margin: 8px;
+  max-width: 216px;
+  text-align: center;
+  word-wrap: break-word;
+ }
+
+ .member-label{
+  background-color: $courseware-button-border-color;
+  color: $gray-4;
+  font-family: $font_family1;
+  font-size: 12.8px;
+  font-weight: 700;
+  line-height: 24px;
+  list-style-image: none;
+  font-weight: 700;
+  font-size: 0.8em;
+  padding: 5px 0px;
+ }
+
+ .member-founder:hover .member-label {
+  background-color: $link-color;
+  //border: 0px none;
+  color:$white;
+ }
+
+ .member-tile:hover {
+  border: 1px solid $link-color;
+  background-color: $white;
+ }
+
+ .item-list-half {
+  color: $gray-4;
+  font-family: $font_family2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0px;
+  overflow: auto;
+  padding: 0px;
+  word-wrap: break-word;
+ }
+}

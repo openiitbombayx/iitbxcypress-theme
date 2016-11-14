@@ -1,0 +1,329 @@
+//IITBombayX-2016, This file is created by Nitin Ayer, it contains CSS related to Team page.
+
+.team_page_en{
+ header.global {
+  position: fixed;
+  top: 0px;
+ }
+
+  header.global nav {
+   width: 960px;
+ }
+ .wrapper-footer footer {
+   width: 960px !important;
+ }
+
+ .wrapper-footer footer .open-edx_logo, #footer-openedx .open-edx_logo {
+   padding-top: 40px !important;
+ }
+
+ .content-wrapper {
+   padding-bottom: 0px;
+   margin-top: 76px;
+ }
+
+ .about{
+   padding: 0px !important;
+ }
+
+ .main_content{
+   width: 100%;
+   height: auto;
+   margin: auto;
+ }
+
+ .banner{
+   width: 960px;
+   height: auto;
+   margin: auto;
+   background: $white;
+   border-bottom: 1px solid $border-color-l3;
+ }
+
+ .wrapper{
+   //width: 100%;
+   height: auto;
+   margin: auto;
+   //background: #F7F7F7;
+}
+
+ .wrapper-container{
+   width: 960px;
+   height: auto;
+   margin: auto;
+   background: $white;
+ }
+
+ .wrapper-inner{
+   color: $gray-4;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   overflow: hidden;
+ }
+
+ .inner-class{
+   background-color: $white;
+   clear: none;
+   color: $gray-4;
+   float:left;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   width: 960px;
+ }
+
+ .inner-content{
+   color: $gray-4;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   margin-left: 0px;
+   margin-right: 0px;
+   min-height: 1px;
+   overflow: visible;
+   word-wrap: break-word;
+ }
+
+ .inner-section{
+   color: $gray-4;
+   display: block;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   margin-left: 0px;
+   margin-right: 0px;
+   padding: 25px;
+   word-wrap: break-word;	
+   /* IITBombayX related change for viewing website from mobile device. 2nd Nov 2015*/
+   height: 100%;
+ }
+
+ .field-page-tagline{
+   color: $m-gray-d4;
+   font-weight: 300;
+   border-bottom: 1px solid $border-color-l3;
+   font-size: 1.5em;
+   line-height: 1.45em;
+   margin: 0px 0px 0.7em;
+   padding: 0px 0px 0.45em;
+   font-family: $font_family1; 
+   text-transform:none; 
+   letter-spacing:0px;
+ }
+
+ .field-page-body{
+   width:693px;
+   margin:auto;
+   padding:0px;
+   background-color: $gray-3;
+ }
+
+ .content-container{
+   width:663px;
+   padding:15px;
+   margin:0px;
+   display:inline-block;
+ }
+
+ .view-content{
+   margin:auto;
+   background-color: $white;
+   margin: 0px 0px 25px 0px;
+   padding: 15px;
+   display:inline-block;
+   box-shadow: (3px 2px 5px rgba(0, 0, 0, .5));
+   //box-shadow: 3px 2px 5px #888888;
+ }
+
+ .member-image{
+   width:130px;
+   padding:0px;
+   margin: 0px 15px 0px 0px;
+   display:inline-block;
+   float:left;
+   max-height:130px;
+   max-width:130px;
+ }
+
+ .image-info{
+   width:130px;
+   height:130px;
+   max-height:130px;
+   max-width:130px;
+ }
+
+ .member-info{
+   width:400px;
+   padding:0px;
+   margin: 0px;
+   display:inline-block;
+   width:485px;
+   max-width:485px;
+   line-height: 1.5em;
+ }
+
+ .team-member-name h3{
+   color: $gray;
+   font-size: 1.2em;
+   /*font-size:14px;*/
+   font-weight: 600;
+   margin: 0px;
+   padding: 0px;
+   overflow: hidden;
+   /*max-width:315px;*/
+   text-overflow: ellipsis;
+   white-space: nowrap; 
+   font-family: $font_family1;
+ }
+
+ .team-name h4{
+   color:$gray;
+   font-size: 1em;
+   font-weight: 400;
+   padding:0px;
+   margin:0px;
+   overflow: hidden;
+   /*max-width:315px;*/
+   text-overflow: ellipsis;
+   white-space: nowrap; 
+   font-family: $font_family1;
+ }
+
+ .team-member-role h4{
+   color: $gray;
+   font-size: 1em;
+   font-weight: 400;
+   padding:0px;
+   margin:0px 0px 15px 0px;
+   overflow: hidden;
+   /*max-width:315px;*/
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   font-family: $font_family1; 
+ }
+
+ .team-member-info{
+   height:110px;	
+ }
+
+ .box{
+   font-size: 14px;
+   color: $gray;
+   text-align:justify;
+   margin:0px;
+   padding:0px;
+   line-height:1.5em;
+   max-height:130px;
+   font-family: $font_family1;
+ }
+
+ strong{
+   color: $black;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 24px;
+   word-wrap: break-word;
+ }
+
+ .ul-class{
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   margin: 16px 0px 16px 0px;
+   padding:0px 0px 0px 40px;
+   word-wrap: break-word;
+ }
+
+ .ul-class li{
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   word-wrap: break-word;
+ }
+
+ .table_column01{
+   background-color: $table-coloumn_bg;
+ }
+
+ .table_column02{
+   padding:0px;
+ }
+
+ .sidebar{
+   padding-top:53px;
+   padding-left:52px;
+ }
+
+ .sidemenu{
+   border: 0px none $gray-4;
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 14.4px;
+   font-weight: 400;
+   line-height: 24px;
+   list-style: outside none none;
+   margin: 0px;
+   padding: 0px;
+   text-align:left;
+   word-wrap: break-word;
+ }
+
+ .sidemenu li{
+   color: $gray-4;
+   font-family: $font_family1;
+   font-size: 14.4px;
+   font-weight: 400;
+   line-height: 24px;
+   list-style: outside none none;
+   margin: 0px;
+   padding: 10px 10px 10px 0px;
+   text-align:left;
+   text-transform: uppercase;
+   word-wrap: break-word;
+   text-transform: none;
+ }
+
+ .sidemenu li a{
+   //color: $gray-4;
+   font-family: $font_family1;
+   font-size: 14.4px;
+   font-weight: 600;
+   line-height: 24px;
+   list-style: outside none none;
+   text-align:left;
+   text-decoration: none !important;
+   text-transform: uppercase;
+   word-wrap: break-word;
+ }
+
+ .toggle, .toggle:link, .toggle:active, .toggle:visited {
+   color: $link-color;
+   text-decoration: underline;
+   display:inline;
+ }
+
+ .toggle span, .toggle span:link, .toggle span:active, .toggle span:visited {
+   color: $link-color;
+   text-decoration: underline;
+   display:inline;
+ }
+
+ .toggle span:hover {
+   color: $button-color;
+ }
+
+ div.box .toggle .close,
+ div.box.opened .toggle .open {
+   display: none;
+ }
+
+ div.box .toggle .opened,
+ div.box.opened .toggle .close {
+   display: inline;
+ }
+}

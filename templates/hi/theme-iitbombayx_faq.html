@@ -1,0 +1,121 @@
+<%inherit file="../../main.html" />
+<%! from microsite_configuration import microsite %>
+<%include file='../../modal/_modal-settings-language.html'/>
+<%namespace name='static' file='../../static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<%block name="pagetitle">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} प्रश्‍नोत्‍तरी</%block>
+<%block name="bodyclass">iitbx_faq_hi</%block><!--IITBombayX-2016 Nitin Ayer, block is added to identify CSS in SCSS files-->
+<!--IITBombayX-2016, CSS for this page is written in _about_page.scss inside theme folder by Nitin Ayer-->
+
+<html>
+<head>
+</head>
+<body>
+
+<section class="container about">
+	<div class="main_content">
+		<div class="banner"><img src=${static.url('themes/'+settings.THEME_NAME+'/images/FAQ/faq_banner.png')} width="960px"></div>
+			<div class="wrapper">
+				<div class="wrapper-container">
+					<div class="wrapper-inner">
+						<div class="inner-class">
+							<div class="inner-content">
+								<table border="0" width="960px;" cellpadding="0" cellspacing="0">
+
+								<tr>
+
+								<td class ="table_column01" width="217px" valign="top">
+								<div class="sidebar">
+
+								<ul class="sidemenu">
+                        	
+								<li><a class="links" href="${marketing_link('ABOUT')}">हमारे बारे में</a></li>
+								<li><a class="links" href="${marketing_link('RESEARCH')}">अनुसंधान एवं<br>शिक्षा-शास्‍त्र</a></li>
+								<li><a class="links" href="#" target="_blank">ब्‍लॅाग</a></li>
+								<li><a class="links" href="#" target="_blank">समाचार</a></li>
+								<li><a class="links" href="${marketing_link('FAQ')}">शिक्षार्थियों की प्रश्‍नोत्‍तरी</a></li>
+								<li><a class="links-active" href="${marketing_link('IITBOMBAYX_FAQ')}">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} की प्रश्‍नोत्‍तरी</a></li>
+								<li><a class="links" href="${marketing_link('MEMBER')}">Team</a></li>
+								<li><a class="links" href="${marketing_link('CONTACT')}">संपर्क-सूत्र</a></li>
+								</ul>
+
+								</div>
+								</td>
+
+								<td class ="table_column02" width="743px">
+								<section class="inner-section">
+
+								<h2 class="field-page-tagline view-mode-full">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} प्रश्‍नोत्‍तरी</h2>
+								<div class="field-page-body view-mode-full">
+                
+                            					<p> हमारा उद्देश्य आपकी निश्चित सफलता के लिए आपको स्व-सहायता साधन प्रदान करना है  क्या आपके पास शिक्षार्थी हेतु कुछ विशिष्ठ प्रश्न हैं?  हमारे शिक्षार्थियों की प्रश्नोत्तरी देखें या अपने प्रश्नों को पाठ्यक्रम आधारित चर्चा के मंच पर पोस्ट करें। कुछ और  भी प्रश्न हैं या सहायता की आवश्यकता है? अपने प्रश्नों को हमारे संपर्क पृष्ठ के माध्यम से जमा करें।</p>
+
+								<p><strong>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} प्रश्‍नोत्‍तरी</strong></p>
+
+								<div>
+								<section class="ac-container">
+
+								<div>
+								<input id="ac-1" name="accordion-1" type="checkbox" />
+								<label for="ac-1">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} क्या है?</label>
+								<article class="ac-small">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} मानव संसाधन विकास मंत्रालय, भारत सरकार की एक पहल है, जिसे भा. प्रौ. सं. - मुम्बई द्वारा परिकल्पित (रूपांकित) एवं विकसित किया जा रहा है एवं जिसे OPEN edX (ओपन ईडीएक्स) द्वारा सशक्त किया गया है। ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} का मुख्य उद्देश्य दुनिया भर के सभी शिक्षार्थियों के लिये उच्च गुणवत्ता की शिक्षा पारंपरिक एवं ऑनलाइन कक्षाओं के माध्यम से प्रदान करना है।</p>
+								</article>
+								</div>
+
+								<br><p><strong>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} प्रश्‍नोत्‍तरी - ओपन-सोर्स प्रौद्योगिकी एवं ओपन edX.</strong></p>
+
+								<div>
+								<input id="ac-2" name="accordion-1" type="checkbox" />
+								<label for="ac-2">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} कौन सी प्रौद्योगिकी का उपयोग करता है?</label>
+								<article class="ac-small">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} मंच की विशेषताओं और परियोजनाओं में शामिल हैं:  आत्म गति से अभ्यास, स्वयं पुस्तक से सीखना, ऑनलाइन चर्चा  समूह, विकी-आधारित सम्मिलित अध्ययन, शिक्षार्थियों के शिक्षा के स्तर का आंकलन पाठ्यक्रम के माध्यम से एवं ऑनलाइन प्रयोगशाला, अन्य पारस्परिक शिक्षण टूल। चूंकि यह ओपन-सोर्स है, इसलिये पूरे विश्व के समुदाय द्वारा सहयोगात्मक रूप से हम सभी के लिये नवीन सुविधाओं को आवश्यकता अनुसार जोड़ेंगे।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-3" name="accordion-1" type="checkbox" />
+								<label for="ac-3">यह अन्य विश्वविद्यालयों एवं संस्थानों द्वारा किये जा रहे ऑनलाईन कार्य से किस प्रकार भिन्न है?</label>
+								<article class="ac-small">
+								<p>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} एक लाभ निरपेक्ष पहल है जो की शैक्षिक अनुभवों में सुधार और समझ की ओर विद्यालयों की सीमा के भीतर एवं बाहर समर्पित है  एक प्रयोगशाला की तरह भी कार्यरत रहेगा जहाँ से  आंकड़ो का संग्रहण यह पूर्णत: समझने हेतु किया जाता है, कि शिक्षार्थियों द्वारा कैसे सीखा जा रहा है।</p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-4" name="accordion-1" type="checkbox" />
+								<label for="ac-4">ओपन-सोर्स क्‍या है?</label>
+								<article class="ac-medium">
+								<p>ओपन-सोर्स एक दर्शन है, जिसमें उपयोगकर्ताओं को अपनी आवश्यकता  के आधार पर नि:शुल्क सॉफ्टवेयर बनाने / परिवर्तित करने एवं उपयोग की सुविधा प्रदान की जाती है। इसके प्रतिस्वरूप उपयोगकर्ता को जन सहयोग के रूप में इसे बनाने हेतु अपना अमूल्य योगदान प्रदान करना होता है। योगदान आधिकारिक रूप से आरंभिक सोर्स कोड में जोड़ने के पूर्व  इसकी  गुणवत्ता एवं उपयोगिता की पूर्ण जाँच की जाती है,  साथ ही समस्त निश्चित मानकों का पूर्ण निरीक्षण किया जाता है। ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} आधिकारिक मंच दिनांक 25 सितम्बर 2014 खुले स्रोत कोड के रूप में उपलब्ध कराया गया था। </p>
+								</article>
+								</div>
+
+								<div>
+								<input id="ac-5" name="accordion-1" type="checkbox" />
+								<label for="ac-5">मैं ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} की ओपन-सोर्स प्लेटफार्म प्रौद्योगिकी कैसे प्राप्त कर सकता हूँ?</label>
+								<article class="ac-small">
+								<p>IITBomabayX के व्यापक पैमाने के  मंच स्रोत कोड साथ ही IIT Bombay तथा अन्य योगदान-कर्ताओं  द्वारा  किए गए मंच विकास आसानी से उपलब्ध हैं। सभी विवरण IITBomabayX की आधिकारिक वेब पोर्टल पर उपलब्ध हैं।</p>
+								</article>
+								</div>
+
+								</section>
+								</div>
+							
+							
+								</div>
+								</section>
+
+								</td>
+								</tr>
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</section>
+</body>
+</html>
+

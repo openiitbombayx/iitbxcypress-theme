@@ -1,0 +1,93 @@
+//IITBombayX-2015, This file is created by Nitin Ayer, it contains CSS related to Register and Login page.
+
+.register_login_page {
+ header.global {
+  position: fixed;
+  top: 0px;
+ }
+
+  header.global nav {
+   width: 960px;
+ }
+ .wrapper-footer footer {
+   width: 960px !important;
+ }
+
+ .wrapper-footer footer .open-edx_logo, #footer-openedx .open-edx_logo {
+   padding-top: 40px !important;
+ }
+
+ .content-wrapper {
+  margin-top: 76px;
+  padding-bottom: 0px;
+ }
+
+ .login-register {
+  padding-bottom: 40px;
+  max-width: 960px;
+ }
+
+ .ui-autocomplete {
+  background-color: rgba($gray-l4, 0.95);
+  //background-color: rgba(236, 236, 236, 0.95);
+  width: 300px;
+  padding: 25px;
+  height: 100px;
+  border: 1px solid #222;
+  margin: 5px;
+  overflow: scroll;
+ }
+
+ .ui-menu-item{
+  list-style-type: none;
+ }
+
+ .ui-menu-item a {
+  color: $black !important;
+  //color: #222 !important;
+  cursor: pointer;
+ }
+
+ .ui-helper-hidden-accessible{
+  display: none;
+ }
+
+ .login-register .action-primary {
+  background: $button-color none repeat scroll 0% 0%;
+  box-shadow: 0px 2px 1px 0px $white;
+  /*box-shadow: 0px 2px 1px 0px #0A4A67;*/
+  color: $gray-1;
+  text-shadow: none;
+ }
+
+ .login-register .action-primary:hover {
+  box-shadow: none !important;
+  background: $link-color none repeat scroll 0% 0%;
+ }
+
+ .login-register .action-primary:focus {
+  box-shadow: none !important;
+  background: $link-color none repeat scroll 0% 0%;
+ }
+
+ .login-register .nav-btn {
+  border: 1px solid $button-color;
+  color: $button-color;
+ }
+
+ .login-register .nav-btn:hover {
+  box-shadow: 0px 2px 1px 0px $white;
+  background: $link-color none repeat scroll 0% 0%;
+  color: $gray-1;
+ }
+
+ .login-register .nav-btn:focus {
+  box-shadow: none !important;
+  background: $link-color none repeat scroll 0% 0%;
+  color: $gray-1;
+ }
+
+ .login-register .form-field .field-link{
+  color: $button-color;
+ }
+}

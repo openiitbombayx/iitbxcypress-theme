@@ -1,0 +1,86 @@
+<%inherit file="../../main.html"/>
+<%namespace name='static' file='static_content.html'/>
+<%include file='../../modal/_modal-settings-language.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.conf import settings
+  from edxmako.shortcuts import marketing_link
+  from courseware.models import Organization
+%>
+<%namespace name='static' file='../../static_content.html'/>
+<%! from microsite_configuration import microsite %>
+
+<%block name="pagetitle">${_("How it works")}</%block>
+
+<%block name="bodyclass">how_it_works_hindi</%block><!--IITBombayX-2015 Nitin Ayer, block is added to identify CSS in SCSS files-->
+<!--IITBombayX-29/12/2015, CSS for How It Works page is written in _how_it_works_en.scss inside themes folder by Nitin Ayer-->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+</head>
+<body>
+	<div class="outer-content">
+		<div class="main_content">
+			<div class="banner"><img src=${static.url('themes/'+settings.THEME_NAME+'/images/how-it-works/how-it-works_hindi.jpg')} width="960px"></div>
+				<div class="container">
+		 			<div class="newsline">अध्ययन, आनंद ले ,एक नया शौक़ /कौशल सीखें, अपना जीवन प्रगतिशील करें।</div>
+						<div class="cmsdata">
+
+						<p class="banner_block_01">
+						<strong>वास्‍तविक कक्षायें</strong>
+						विज्ञान से कला <br>
+						से प्रौद्योगिकी<br>तक,<br>${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}<br>
+						श्रेष्ठतम पाठ्यक्रम,<br>श्रेष्ठतम प्राध्या‍पकों<br>
+						द्वारा प्रस्तुत करते हैं ।<br><br>नये <a href="#" class="links-active" target="_blank"> ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} डेमो पाठ्यक्रम हेतु </a> जांच करें।</p>
+    
+						<p class="banner_block_02">
+						<strong>एक अद्वितीय अनुभव</strong>
+						हमारे विषय <br>विशेसज्ञो के<br>
+						द्वारा आपकी<br>स्‍क्रीन तक - हम <br>
+						आपको सुगमता <br>से ग्रहित पाठ्य विषय वस्तु , वीडियो और  खेलों की भांति प्रयोगशाला के माध्यम से सहायता प्रदान करेंगे ।
+						</p>
+
+						<p class="banner_block_03">
+						<strong>आपके समयानुसार,</strong>
+        						आपके घर/<br>आफिस/<br>
+						कार्यस्थल <br>एवं अपने <br>
+						मनपसंद स्‍थान से, <br>
+						अपनी गति से ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} द्वारा  संचालित पाठ्यक्रम चुनें।<br>
+						हमारी आभासी कक्षायें आप सभी के लिये, 24/7 खुली है।
+						</p>
+
+						<p class="banner_block_04">
+						<strong>नये मित्रों से मिलें,</strong>
+						नवीनतम सामाजिक <br>शिक्षण साधन <br>
+						के माध्यम से <br>विश्व में अपने जैसे <br>
+						दूसरे बुद्धिमान, <br>लगनशील, कर्मठ <br>
+						व्यक्तियों से जुडें <br>(peer-to-peer )।
+						</p>
+
+	    					<p class="learn_more_tagline">अधिक सीखें : यहॉ से <a href="#" class="links-active" target="_blank">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} का नया डेमो पाठ्यक्रम</a> चुने। अधिक प्रश्‍न है ? हमारी <a href="${marketing_link('FAQ')}" class="links-active" target="_blank">प्रश्‍नोत्‍तरी</a> का अवलोकन करें।</p>
+
+						<h2 class="learner_tagline">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} का शिक्षार्थी बनना अत्यंत सरल  है…</h2>
+						<div class="outer_steps">
+						<div class="inner_steps">
+   						<ul class="how-it-works-steps">
+						<li><strong>आपका नया पाठ्यक्रम खोजें</strong>पाठ्यक्रम पृष्ठ खोजें तथा विषयवस्तु एवं प्राध्यापकों का अन्वेषण करें। हम हमेशा नया अद्यतित कर रहे हैं।</li>
+    						<li><strong>समीक्षा एवं चयन करें</strong><br>पाठ्यक्रम की अपेक्षाओं को जानने हेतु, समय सीमा एवं पाठ्यक्रम की पूर्वापेक्षा का अध्ययन करें।</li>
+    						<li><strong><font class="platform_name_small_caps">${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)}</font> के शिक्षार्थी बनें</strong>तत्काल "पंजीकृत करें" पर क्लिक करें। (जी,  हाँ ) ${('{platform_name}').format(platform_name=settings.PLATFORM_NAME)} पाठ्यक्रम एवं कक्षायें दोनों नि:शुल्क हैं।</li>
+    						<li><strong>पढ़े  और आनंद लें</strong><br>वास्तविक पुस्तको को पढ़ें  ,अध्ययन आरंभ करें  और ऑनलाइन के द्वारा दूसरों के साथ जुड़े  - और आनंद लें!</li>
+                                                <div class="clearer"></div><!--IITBombayX-2016 Do not remove this DIV tag-->
+    						</ul>
+						</div>
+						</div>
+
+						<div class="submit">
+							<input type="submit" value="एक पाठ्यक्रम खोजें एवं सीखना आरंभ करें।" onClick="location.href='/all_courses/all'"></input>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

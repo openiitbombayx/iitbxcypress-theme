@@ -1,0 +1,227 @@
+<%inherit file="main.html"/>
+<!-- Bharat MOOCs 19th Sept 2014 Added language selection box -->
+<%include file='modal/_modal-settings-language.html'/>                                    
+<%namespace name='static' file='static_content.html'/>          
+<%! from django.utils.translation import ugettext as _ %>       
+<%!                                                             
+  from django.core.urlresolvers import reverse          
+  from django.conf import settings
+  from edxmako.shortcuts import marketing_link  
+  from courseware.models import Organization
+%>                                              
+<%namespace name='static' file='static_content.html'/>  
+<%! from microsite_configuration import microsite %>
+
+<!--Updated by Bab-->
+<%block name="pagetitle">${_("Courses")}</%block>
+
+<%block name="bodyclass">courses_page</%block><!--IITBombayX-2015 Nitin Ayer, block is added to identify CSS in SCSS files-->
+
+<!--IITBombayX-2015, CSS for this page is written _courses_en.scss files in themes foldes by Nitin Ayer-->
+
+<html>
+<head>
+<script type='text/javascript' src='/static/js/jquery.dotdotdot-1.2.1.js'></script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+$('#dot6 .view_row_course #multilinedText').each(function() {
+	$(this).dotdotdot()
+	});
+});//]]>
+</script>
+</head>
+
+<body>
+	<div class="inner-content">
+		<div class="inner-content_banner">
+			<div class="homebanner">
+				<div class="courses_bannertext_container">
+					<div class="bannertext_innercontainer">
+						<div class="courses_bannertext">
+						<p class="courses_tagline_one">${_("TAKE ONLINE COURSES")}</p>
+						<p class="courses_tagline_two">${_("from one of India's best Universities")}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="main_content">
+		<!-- Below_banner_button_strip starts-->
+			<div class="region_highlighted">
+				<div class="course_filter">
+				<form id="coursefilter-form" accept-charset="UTF-8" method="post" action="/all_courses/${coursediff}" novalidate>
+                                       <input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }"> 
+					<div class="item_link">
+						<ul>
+						<!--IITBombayX-2016 Added highlights for the course sorting selection-->
+                                                %if coursediff=='all':
+                                                  <li class="even"><a href="all" class="course_sort_select">${_("all")}</a></li>
+                                                %else:
+						  <li class="even"><a href="all" class="course_sort">${_("all")}</a></li>
+                                                %endif
+                                                %if coursediff=='current':
+       						  <li class="odd"><a href="current" class="course_sort_select">${_("current")}</a></li>
+                                                %else:
+                                                  <li class="odd"><a href="current" class="course_sort">${_("current")}</a></li>
+						%endif
+						%if coursediff=='upcoming':
+						  <li class="even"><a href="upcoming" class="course_sort_select">${_("upcoming")}</a></li>
+						%else:
+                                                  <li class="even"><a href="upcoming" class="course_sort">${_("upcoming")}</a></li>
+						%endif
+                                                %if coursediff=='past':
+      						  <li class="odd"><a href="past" class="course_sort_select">${_("past")}</a></li>
+						%else:
+						  <li class="odd"><a href="past" class="course_sort">${_("past")}</a></li>
+						%endif
+                                                </ul>
+                                        	<!--<ul>
+                                                 %for subject in subjects:
+                                                 <li class="even"> <a href="${subject.id}">${subject.subject_name}</option>
+                                                 %endfor
+						</ul>-->
+					</div>
+					<div class="item_subject">
+						<select id="edit_subject" name="subject">
+                                                 <option value="">--</option>
+                                                 %for subject in subjects:
+						<!--IITBombayX-2016 Retaining subject selected between calls-->
+                                                   %if subject_id==str(subject.id):
+                                                     <option value="${unicode(subject.id)}" selected>${ unicode(subject.subject_name) }</option>
+                                                   %else:
+                                                     <option value="${unicode(subject.id)}">${ unicode(subject.subject_name) }</option>
+ 						   %endif
+                                                 %endfor
+						</select>
+					</div>
+
+					<button  id="submit" class="form-submit" type="submit" name="submit" href="">${_("FIND")}</button>
+				</form>
+				</div>
+			</div>
+		<!-- Below_banner_button_strip_ends-->
+		
+		<!-- region main content-->
+			<div class="inner_region_content">
+				
+				<!-- Course_container-->
+				<div class="view_content" id="dot6">			
+<!--Bharat_MOOC 10th Dec; Defect Fix; If course has no matching courses, show appropriate message -->
+<!--Bharat_MOOC 20th Dec; Defect Fix; If no subject is selected from the dropdown list, show appropriate message -->
+% if len(coursePg) == 0 and error == 0:
+<center>${_("There are no matching courses.")}</center><br>
+
+%elif len(coursePg) != 0 and error == 0 :
+
+				<!--first course start -->
+				% for object in coursePg:
+					<div class="view_row_course">
+
+                                        <!---course description starts-->
+
+                                                <div class="left_course_view_fieldset">
+                                                <!--    <div class="new_course_ribbon">
+                                                        <img src="images/courses/course-status-new.png">
+                                                        </div>-->
+                                <!--Bharat MOOCs 19th Sept 2014 Added href for opening course link-->
+                                                        <div class="top_view_fieldset">
+                                                                <h2 class="title_course_title">
+<!-- IITBombayX Cypress url of course link changed; it will now depend on the type of course, either draft or split -->
+                                                                ${object[8]}:&nbsp;<strong><a href="/courses/${object[11]}/about">${object[0]}</strong></a>
+                                                                </h2>
+                                                                <div class="course_sub_title" id="multilinedText">
+                                                                ${object[1]}
+                                                                </div>
+								<div class="link_courses_page">
+<!-- IITBombayX Cypress url of course link changed; it will now depend on the type of course, either draft or split -->
+								<a class="links-active" href="/courses/${object[11]}/about" target="_blank">Read more.</a>
+								</div>
+                                                        </div>
+
+                                                        <div class="bottom_view_fieldset">
+                                                                <ul class="clearfix">
+                                                                <li class="first">
+                                                                <span class="label">${_("Starts")}:</span>
+                                                                %if object[7] != None:
+                                                                                ${object[7].strftime("%b %d %Y")}
+                                                                        %else:
+                                                                                ${object[7]}
+                                                                        %endif
+                                                                </li>
+                                                                <li>
+                                                                        <span class="label">${_("Instructor")}:</span>
+                                <!-- Bharat MOOCs 19th Sept 2014 Display name of first instructor only instead of entire list -->
+                                                                        %if len(object[4]) !=0:
+                                                                        ${object[4][0]}
+                                                                        %else:
+                                                                        None
+                                                                        %endif
+                                                                </li>
+                                                                <li>
+                                                                        <strong class="college_name">${object[9]}</strong>
+                                                                </li>
+                                                                </ul>
+                                                        </div>
+                                                </div>
+                                        <!--course description ends-->
+
+
+					<!---course image area starts-->
+						<div class="right_course_view_fieldset">
+							<div class="image">
+				<!--Bharat MOOCs 19th Sept 2014 Added href for opening course link-->
+							<a href="/courses/${object[11]}/about"><img class="image_style_none" title="${object[0]}" alt="${object[0]}" src="${object[5]}"  width="265px" height="140px"></a>
+							</div>
+
+							<div class="learnmore_link">
+							<!--Bharat MOOCs 19th Sept 2014 Added href for opening course link-->
+							<input type="submit" value = "${_("Learn More")}" onClick="location.href='/courses/${object[11]}/about'"></input>
+							</div>
+						</div>					
+					<!---course image area ends-->
+
+					</div>
+					<!--first course ENDs -->
+					% endfor
+		   </div>
+		<!-- Course_container ends here-->
+
+<!-- Bharat MOOCs 23rd Sept 2014 Page numbers moved up -->
+		<div class="pagination">
+			<span class="step-links">
+			<!--IITBombayX-2016 Courses pagination method change to POST-->
+			<form id="pagination-form" accept-charset="UTF-8" method="post" action="/all_courses/${coursediff}" novalidate>
+				<input type="hidden" name="csrfmiddlewaretoken" value="${ csrf_token }">
+				<input type="hidden" name="subject" id="subject" value="${subject_id}"/>
+			%if coursePg.has_previous():
+				<span class="previous_button">
+					<input type="hidden" id="previous" name="previous" value="${coursePg.previous_page_number()}" />
+					<input type="submit" name="submit" value="previous"/>
+					<!--<a href="?page=${coursePg.previous_page_number()}" class="">${_("Previous")}&nbsp;</a>-->
+					<!--<a href="?page=${coursePg.previous_page_number()}" class="css_btn_class">${_("Previous")}&nbsp;</a>-->
+				</span>
+			%endif %
+				<span class="current">
+				${_("Page")} ${coursePg.number} ${_("of")} ${coursePg.paginator.num_pages} 
+				</span>
+				%if coursePg.has_next():
+				<span class="next_button">
+					<input type="hidden" id="next" name="next" value="${coursePg.next_page_number()}" />
+					<input type="submit" name="submit" value="next"/>
+					<!--<a href="?page=${coursePg.next_page_number()}" class="">&nbsp;${_("Next")}</a>-->
+				</span>
+			%endif
+			</form>
+			</span>
+
+		</div>	
+%else:
+<center>${_("Use the drop down list to select the subject of your interest.")}</center><br>	
+%endif
+	</div>	
+</div>
+</div>
+</div>
+</body>
+
+</html>
